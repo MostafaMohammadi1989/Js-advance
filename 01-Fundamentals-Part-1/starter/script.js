@@ -1,35 +1,55 @@
-let meisam = "This is test for js file";
+// let meisam = "This is test for js file";
 
-// if (meisam === "This is test for js file") alert("Js is fun!");
+// // if (meisam === "This is test for js file") alert("Js is fun!");
 
-// console.log(10 + 15 + 80 - 5);
+// // console.log(10 + 15 + 80 - 5);
 
-let firstName = "Meisam";
-let lastName = "Mohammadi";
+// let firstName = "Meisam";
+// let lastName = "Mohammadi";
 
-let $function = 27;
+// let $function = 27;
 
-let name = "majid";
+// let name = "majid";
 
-let PI = 3.415;
+// let PI = 3.415;
 
-// It's better we use tihs funtion for wirtting stored variable
+// // It's better we use tihs funtion for wirtting stored variable
 
-let myFirstJob = "Programer";
-let mySecondJob = "Photograoher";
+// let myFirstJob = "Programer";
+// let mySecondJob = "Photograoher";
 
-// not this
+// // not this
 
-let jab1 = "Programer";
-let jab2 = "Photographer";
+// let jab1 = "Programer";
+// let jab2 = "Photographer";
+
+// console.log(
+//   "My name is " +
+//     firstName +
+//     " " +
+//     lastName +
+//     " and my first job is " +
+//     myFirstJob +
+//     " and my second job is " +
+//     mySecondJob
+// );
+
+let javaScriptIsFun = true;
+console.log(typeof javaScriptIsFun);
+
+let age = 23;
+console.log(typeof age);
+
+javaScriptIsFun = "Yes!";
+console.log(typeof javaScriptIsFun);
+
+let firstNam;
+console.log(typeof firstNam);
+
+firstNam = "Meisam";
+console.log(typeof firstNam, firstNam);
 
 console.log(
-  "My name is " +
-    firstName +
-    " " +
-    lastName +
-    " and my first job is " +
-    myFirstJob +
-    " and my second job is " +
-    mySecondJob
+  "what is Meisam Type data :" + " " + firstNam + " is " + typeof firstNam
 );
+console.log(typeof null);
