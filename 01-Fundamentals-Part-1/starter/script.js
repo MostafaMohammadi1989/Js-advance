@@ -34,22 +34,35 @@
 //     mySecondJob
 // );
 
-let javaScriptIsFun = true;
-console.log(typeof javaScriptIsFun);
+// let javaScriptIsFun = true;
+// console.log(typeof javaScriptIsFun);
 
-let age = 23;
-console.log(typeof age);
+// let age = 23;
+// console.log(typeof age);
 
-javaScriptIsFun = "Yes!";
-console.log(typeof javaScriptIsFun);
+// javaScriptIsFun = "Yes!";
+// console.log(typeof javaScriptIsFun);
 
-let firstNam;
-console.log(typeof firstNam);
+// let firstNam;
+// console.log(typeof firstNam);
 
-firstNam = "Meisam";
-console.log(typeof firstNam, firstNam);
+// firstNam = "Meisam";
+// console.log(typeof firstNam, firstNam);
 
-console.log(
-  "what is Meisam Type data :" + " " + firstNam + " is " + typeof firstNam
-);
-console.log(typeof null);
+// console.log(
+//   "what is Meisam Type data :" + " " + firstNam + " is " + typeof firstNam
+// );
+// console.log(typeof null);
+// How can we declear variable in JavaScript
+
+// let firstJob = "Programer";
+// console.log(firstJob);
+
+// firstJob = "Photographer";
+// console.log(firstJob);
+
+// const firstName = "Meisam";
+// console.log("my name is " + firstName);
+
+// but we can not change const variable actually const hasn't a muttede variable
+// firstName = "Majid"
