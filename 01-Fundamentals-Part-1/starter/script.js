@@ -66,3 +66,36 @@
 
 // but we can not change const variable actually const hasn't a muttede variable
 // firstName = "Majid"
+
+// Math oprators
+
+const now = 2037;
+
+const meisamAge = now - 1989;
+const sarahAge = now - 1994;
+
+console.log(
+  "This age for meisam: " + meisamAge + " and this age for sarah: " + sarahAge
+);
+
+console.log(meisamAge - 10 + 5, sarahAge / 2 + 2 ** 3);
+//2**3 means to power of 3 = 2 * 2 * 2
+
+// assiang operators
+let x = 10 + 5; // x = 15
+x += 10; // 15 + 10 = 25
+x *= 4; // 25 * 4 = 100
+x++; // 100 + 1 = 101
+x--; // 101 - 1 = 100
+x--; // 100 - 1 = 99
+
+console.log(x);
+
+//compersion operators > < >= <=
+
+console.log(meisamAge, sarahAge);
+
+console.log(meisamAge > sarahAge);
+
+let fullAge = meisamAge > sarahAge;
+console.log(fullAge);
