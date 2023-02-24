@@ -69,33 +69,54 @@
 
 // Math oprators
 
-const now = 2037;
+// const now = 2037;
 
-const meisamAge = now - 1989;
-const sarahAge = now - 1994;
+// const meisamAge = now - 1989;
+// const sarahAge = now - 1994;
 
-console.log(
-  "This age for meisam: " + meisamAge + " and this age for sarah: " + sarahAge
-);
+// console.log(
+//   "This age for meisam: " + meisamAge + " and this age for sarah: " + sarahAge
+// );
 
-console.log(meisamAge - 10 + 5, sarahAge / 2 + 2 ** 3);
+// console.log(meisamAge - 10 + 5, sarahAge / 2 + 2 ** 3);
 //2**3 means to power of 3 = 2 * 2 * 2
 
 // assiang operators
-let x = 10 + 5; // x = 15
-x += 10; // 15 + 10 = 25
-x *= 4; // 25 * 4 = 100
-x++; // 100 + 1 = 101
-x--; // 101 - 1 = 100
-x--; // 100 - 1 = 99
+// let x = 10 + 5; // x = 15
+// x += 10; // 15 + 10 = 25
+// x *= 4; // 25 * 4 = 100
+// x++; // 100 + 1 = 101
+// x--; // 101 - 1 = 100
+// x--; // 100 - 1 = 99
 
-console.log(x);
+// console.log(x);
 
 //compersion operators > < >= <=
 
-console.log(meisamAge, sarahAge);
+// console.log(meisamAge, sarahAge);
 
-console.log(meisamAge > sarahAge);
+// console.log(meisamAge > sarahAge);
 
-let fullAge = meisamAge > sarahAge;
-console.log(fullAge);
+// let fullAge = meisamAge > sarahAge;
+// console.log(fullAge);
+
+// Operator Precedence
+
+const now = 2037;
+const meisamAge = now - 1989;
+const sarahAge = now - 2023;
+
+let x, y;
+
+x = y = 25 - 10 - 5;
+console.log("X value => " + x + " Y value => " + y);
+
+let averageAge = (meisamAge + sarahAge) / 2;
+console.log(
+  " Meism age => " +
+    meisamAge +
+    " Sarah age => " +
+    sarahAge +
+    " Average age => " +
+    averageAge
+);
