@@ -102,21 +102,77 @@
 
 // Operator Precedence
 
-const now = 2037;
-const meisamAge = now - 1989;
-const sarahAge = now - 2023;
+// const now = 2037;
+// const meisamAge = now - 1989;
+// const sarahAge = now - 2023;
 
-let x, y;
+// let x, y;
 
-x = y = 25 - 10 - 5;
-console.log("X value => " + x + " Y value => " + y);
+// x = y = 25 - 10 - 5;
+// console.log("X value => " + x + " Y value => " + y);
 
-let averageAge = (meisamAge + sarahAge) / 2;
+// let averageAge = (meisamAge + sarahAge) / 2;
+// console.log(
+//   " Meism age => " +
+//     meisamAge +
+//     " Sarah age => " +
+//     sarahAge +
+//     " Average age => " +
+//     averageAge
+// );
+
+// Coding Challenge #1
+// Mark and John are trying to compare their BMI (Body Mass Index), which is
+// calculated using the formula:
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+// and height in meter).
+// Your tasks:
+// 1. Store Mark's and John's mass and height in variables
+// 2. Calculate both their BMIs using the formula (you can even implement both
+// versions)
+// 3. Create a Boolean variable 'markHigherBMI' containing information about
+// whether Mark has a higher BMI than John.
+
+// Test data:
+// § Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
+// m tall.
+// § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
+// m tall.
+// GOOD LUCK 😀
+
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+
+const massMark = 78;
+const heightMark = 1.69;
+
+const massJohn = 92;
+const heighJohn = 1.95;
+
+const markBMI = massMark / heightMark ** 2;
+
+// let markTwoBMI = massMark / (heightMark * heightMark);
+// console.log("One => " + markBMI + " Two => " + markTwoBMI);
+
+const johnBMI = massJohn / (heighJohn * heighJohn);
+
+console.log("Mark BIM = > " + markBMI + " John BIM => " + johnBMI);
 console.log(
-  " Meism age => " +
-    meisamAge +
-    " Sarah age => " +
-    sarahAge +
-    " Average age => " +
-    averageAge
+  "It Mark BMI higher than John?",
+  markBMI > johnBMI,
+  " John BMI higher than Mark BMI?",
+  johnBMI > markBMI
 );
+
+function BIM() {
+  if (markBMI > johnBMI) {
+    console.log("Mark BMI is higher than John BMI");
+  } else if (johnBMI > markBMI) {
+    console.log("John BMI higher than Mark BMI");
+  } else {
+    console.log("Thare BIM both is equal");
+  }
+}
+
+console.log(markBMI > johnBMI);
+console.log(johnBMI > markBMI);
+console.log(BIM());
