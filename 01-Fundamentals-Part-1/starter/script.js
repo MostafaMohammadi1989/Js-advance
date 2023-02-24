@@ -142,37 +142,79 @@
 
 // BMI = mass / height ** 2 = mass / (height * height) (mass in kg
 
-const massMark = 78;
-const heightMark = 1.69;
+// const massMark = 78;
+// const heightMark = 1.69;
 
-const massJohn = 92;
-const heighJohn = 1.95;
+// const massJohn = 92;
+// const heighJohn = 1.95;
 
-const markBMI = massMark / heightMark ** 2;
+// const markBMI = massMark / heightMark ** 2;
 
 // let markTwoBMI = massMark / (heightMark * heightMark);
 // console.log("One => " + markBMI + " Two => " + markTwoBMI);
 
-const johnBMI = massJohn / (heighJohn * heighJohn);
+// const johnBMI = massJohn / (heighJohn * heighJohn);
 
-console.log("Mark BIM = > " + markBMI + " John BIM => " + johnBMI);
+// console.log("Mark BIM = > " + markBMI + " John BIM => " + johnBMI);
+// console.log(
+//   "It Mark BMI higher than John?",
+//   markBMI > johnBMI,
+//   " John BMI higher than Mark BMI?",
+//   johnBMI > markBMI
+// );
+
+// function BIM() {
+//   if (markBMI > johnBMI) {
+//     console.log("Mark BMI is higher than John BMI");
+//   } else if (johnBMI > markBMI) {
+//     console.log("John BMI higher than Mark BMI");
+//   } else {
+//     console.log("Thare BIM both is equal");
+//   }
+// }
+
+// console.log(markBMI > johnBMI);
+// console.log(johnBMI > markBMI);
+// console.log(BIM());
+
+// String and template literals
+
+const firstName = "Meisam";
+const lastName = "Mohammadi";
+const job = "Developer";
+const birthday = 1989;
+const year = 2023;
+
+const meisamInfo =
+  "My name is " +
+  firstName +
+  " and My Last name is " +
+  lastName +
+  " actually My work is " +
+  job +
+  " and I'm " +
+  (year - birthday) +
+  " years old";
+
+console.log(meisamInfo);
+
+// useing a backtic
+
+const meisamNewInfo = `My name is ${firstName} and My last Name is ${lastName} actually My work is ${job} and I'm ${
+  year - birthday
+} years old`;
+
+console.log(meisamNewInfo);
+
+//How can create a new line in the string ? => blew line
 console.log(
-  "It Mark BMI higher than John?",
-  markBMI > johnBMI,
-  " John BMI higher than Mark BMI?",
-  johnBMI > markBMI
+  "this text for \n\
+mullti line in \n\
+this console log"
 );
 
-function BIM() {
-  if (markBMI > johnBMI) {
-    console.log("Mark BMI is higher than John BMI");
-  } else if (johnBMI > markBMI) {
-    console.log("John BMI higher than Mark BMI");
-  } else {
-    console.log("Thare BIM both is equal");
-  }
-}
-
-console.log(markBMI > johnBMI);
-console.log(johnBMI > markBMI);
-console.log(BIM());
+console.log(`Actually we can use the backtic 
+for create a new line 
+in the string
+without to use any node for
+creating new line.`);
