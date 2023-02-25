@@ -179,42 +179,63 @@
 
 // String and template literals
 
-const firstName = "Meisam";
-const lastName = "Mohammadi";
-const job = "Developer";
-const birthday = 1989;
-const year = 2023;
+// const firstName = "Meisam";
+// const lastName = "Mohammadi";
+// const job = "Developer";
+// const birthday = 1989;
+// const year = 2023;
 
-const meisamInfo =
-  "My name is " +
-  firstName +
-  " and My Last name is " +
-  lastName +
-  " actually My work is " +
-  job +
-  " and I'm " +
-  (year - birthday) +
-  " years old";
+// const meisamInfo =
+//   "My name is " +
+//   firstName +
+//   " and My Last name is " +
+//   lastName +
+//   " actually My work is " +
+//   job +
+//   " and I'm " +
+//   (year - birthday) +
+//   " years old";
 
-console.log(meisamInfo);
+// console.log(meisamInfo);
 
-// useing a backtic
+// // useing a backtic
 
-const meisamNewInfo = `My name is ${firstName} and My last Name is ${lastName} actually My work is ${job} and I'm ${
-  year - birthday
-} years old`;
+// const meisamNewInfo = `My name is ${firstName} and My last Name is ${lastName} actually My work is ${job} and I'm ${
+//   year - birthday
+// } years old`;
 
-console.log(meisamNewInfo);
+// console.log(meisamNewInfo);
 
-//How can create a new line in the string ? => blew line
-console.log(
-  "this text for \n\
-mullti line in \n\
-this console log"
-);
+// //How can create a new line in the string ? => blew line
+// console.log(
+//   "this text for \n\
+// mullti line in \n\
+// this console log"
+// );
 
-console.log(`Actually we can use the backtic 
-for create a new line 
-in the string
-without to use any node for
-creating new line.`);
+// console.log(`Actually we can use the backtic
+// for create a new line
+// in the string
+// without to use any node for
+// creating new line.`);
+
+// Taking desition is if snd else statments
+
+const age = 15;
+
+if (age >= 18) {
+  console.log(`Sarah can to drive 🚗`);
+} else {
+  const leftYears = age - 18;
+  console.log(`Sarah can't to drive because she's ${leftYears} years!`);
+}
+
+const birthday = 2023;
+let centry;
+if (birthday <= 2000) {
+  centry = 20;
+} else {
+  centry = 21;
+}
+
+console.log(centry);
