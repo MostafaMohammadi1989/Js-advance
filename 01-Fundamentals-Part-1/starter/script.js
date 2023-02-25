@@ -221,21 +221,58 @@
 
 // Taking desition is if snd else statments
 
-const age = 15;
+// const age = 15;
 
-if (age >= 18) {
-  console.log(`Sarah can to drive 🚗`);
+// if (age >= 18) {
+//   console.log(`Sarah can to drive 🚗`);
+// } else {
+//   const leftYears = age - 18;
+//   console.log(`Sarah can't to drive because she's ${leftYears} years!`);
+// }
+
+// const birthday = 2023;
+// let centry;
+// if (birthday <= 2000) {
+//   centry = 20;
+// } else {
+//   centry = 21;
+// }
+
+// console.log(centry);
+
+// Number 2 Coding Chalenge with id statments
+// Use the BMI example from Challenge #1, and the code you already wrote, and
+// improve it.
+// Your tasks:
+// 1. Print a nice output to the console, saying who has the higher BMI. The message
+// is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+// 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+// BMI (28.3) is higher than John's (23.9)!"
+// Hint: Use an if/else statement 😉
+// GOOD LUCK 😀
+
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+
+const massMark = 95;
+const heightMark = 1.95;
+
+const massJohn = 78;
+const heighJohn = 1.65;
+
+const markBMI = massMark / heightMark ** 2;
+
+const johnBMI = massJohn / (heighJohn * heighJohn);
+
+// if (markBMI > johnBMI) {
+//   console.log(`Mark's BMI is heigher than John's`);
+// } else {
+//   console.log(`John's BMI heigher than Mark's`);
+// }
+
+if (markBMI > johnBMI) {
+  console.log(
+    `Mark's BMI (${Math.floor(markBMI)}) is heigher than John's (${johnBMI})`
+  );
 } else {
-  const leftYears = age - 18;
-  console.log(`Sarah can't to drive because she's ${leftYears} years!`);
+  console.log(`John BMI (${Math.floor(johnBMI)}) is heigher than Makr's`);
 }
-
-const birthday = 2023;
-let centry;
-if (birthday <= 2000) {
-  centry = 20;
-} else {
-  centry = 21;
-}
-
-console.log(centry);
