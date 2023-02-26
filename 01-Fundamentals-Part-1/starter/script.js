@@ -295,3 +295,28 @@
 // console.log(age - 10); // 19 - 10 =  9
 // console.log(age * 10); // 19 * 10 = 190
 // console.log(age / 10); // 19 / 10 = 1.9
+
+// Truthy and falsy values
+
+// in js we have 5 falsy values => 0, undifind, NaN, '', null
+
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean("Meisam"));
+// console.log(Boolean({}));
+// console.log(Boolean(12));
+
+// const monye = 0;
+// const monye = 12;
+// if (monye) {
+//   console.log("You don't spend it");
+// } else {
+//   console.log("You need get a job");
+// }
+
+// let height = 123;
+// if (height) {
+//   console.log("The height id Define");
+// } else {
+//   console.log("The height is Undifine");
+// }
