@@ -253,15 +253,15 @@
 
 // BMI = mass / height ** 2 = mass / (height * height) (mass in kg
 
-const massMark = 95;
-const heightMark = 1.95;
+// const massMark = 95;
+// const heightMark = 1.95;
 
-const massJohn = 78;
-const heighJohn = 1.65;
+// const massJohn = 78;
+// const heighJohn = 1.65;
 
-const markBMI = massMark / heightMark ** 2;
+// const markBMI = massMark / heightMark ** 2;
 
-const johnBMI = massJohn / (heighJohn * heighJohn);
+// const johnBMI = massJohn / (heighJohn * heighJohn);
 
 // if (markBMI > johnBMI) {
 //   console.log(`Mark's BMI is heigher than John's`);
@@ -269,10 +269,29 @@ const johnBMI = massJohn / (heighJohn * heighJohn);
 //   console.log(`John's BMI heigher than Mark's`);
 // }
 
-if (markBMI > johnBMI) {
-  console.log(
-    `Mark's BMI (${Math.floor(markBMI)}) is heigher than John's (${johnBMI})`
-  );
-} else {
-  console.log(`John BMI (${Math.floor(johnBMI)}) is heigher than Makr's`);
-}
+// if (markBMI > johnBMI) {
+//   console.log(
+//     `Mark's BMI (${Math.floor(markBMI)}) is heigher than John's (${johnBMI})`
+//   );
+// } else {
+//   console.log(`John BMI (${Math.floor(johnBMI)}) is heigher than Makr's`);
+// }
+
+// Type Conversion and Coercion
+
+//Conversion
+// const age = "19";
+// console.log(age, typeof age);
+// console.log(Number(age), typeof Number(age));
+
+// const birthday = 1989;
+// console.log(birthday, typeof birthday);
+// console.log(String(birthday), typeof String(birthday));
+
+// const sum = age + 10;
+// console.log(sum);
+
+// Coercion
+// console.log(age - 10); // 19 - 10 =  9
+// console.log(age * 10); // 19 * 10 = 190
+// console.log(age / 10); // 19 / 10 = 1.9
