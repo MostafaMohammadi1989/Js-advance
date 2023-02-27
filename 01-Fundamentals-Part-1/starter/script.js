@@ -320,3 +320,31 @@
 // } else {
 //   console.log("The height is Undifine");
 // }
+
+// Equality Operators === (stric) vs == (loos)
+
+// const age = 23;
+
+// console.log("stric ==> ", age === "23");
+// console.log("loos ==> ", age == "23");
+
+// const favorite = 23;
+
+// if (favorite === "23") console.log("23 is cool number");
+// if (favorite == "23") console.log("23 is cool number");
+
+// const favorite = Number(prompt("What's your favorite number?"));
+
+// if (favorite === 23) {
+//   console.log("23 is a cool number");
+// } else if (favorite === 19) {
+//   console.log("19 is a cool number");
+// } else if (favorite === 7) {
+//   console.log("7 is a cool number");
+// } else {
+//   console.log("Your number is not in category");
+// }
+
+// if (favorite !== 23) {
+//   console.log("Why not 23 is your favorite?");
+// }
