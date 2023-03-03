@@ -348,3 +348,32 @@
 // if (favorite !== 23) {
 //   console.log("Why not 23 is your favorite?");
 // }
+
+// Logical Oprators
+
+const hasLicencDriver = true; // A
+const hasGoodVision = true; //B
+
+console.log(hasLicencDriver && hasGoodVision);
+
+// if (hasLicencDriver && hasGoodVision) {
+//   console.log("Sarah is able to drive");
+// } else {
+//   console.log(`Someone else shoud be to drive`);
+// }
+
+const isTired = true;
+
+// AND Logic
+if ((hasLicencDriver && hasGoodVision, !isTired)) {
+  console.log(`Meisam able to drive`);
+} else {
+  console.log(`Some one else to be derive`);
+}
+
+// OR Logic
+if (hasLicencDriver || hasGoodVision || isTired) {
+  console.log(`Meisam able to drive`);
+} else {
+  console.log(`Some one else to be derive`);
+}
