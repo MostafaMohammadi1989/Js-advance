@@ -456,22 +456,67 @@ GOOD LUCK 😀
 // const scoreDlphine = (96 + 108 + 89) / 3;
 // const scoreKoalas = (88 + 91 + 110) / 3;
 
-const scoreDlphine = (85 + 95 + 75) / 3;
-const scoreKoalas = (97 + 95 + 102) / 3;
-console.log(
-  `Dophines Score = > ${scoreDlphine} and Koalas Score => ${scoreKoalas}`
-);
+// const scoreDlphine = (85 + 95 + 75) / 3;
+// const scoreKoalas = (97 + 95 + 102) / 3;
+// console.log(
+//   `Dophines Score = > ${scoreDlphine} and Koalas Score => ${scoreKoalas}`
+// );
 
-if (scoreDlphine >= 100 && scoreDlphine > scoreKoalas) {
-  console.log(`Dolphines win trophy 😎`);
-} else if (scoreKoalas >= 100 && scoreKoalas > scoreDlphine) {
-  console.log(`Koalas win trophy 😎`);
-} else if (
-  scoreDlphine === scoreKoalas &&
-  scoreDlphine >= 100 &&
-  scoreKoalas >= 100
-) {
-  console.log(`Both team win trophy 😂`);
+// if (scoreDlphine >= 100 && scoreDlphine > scoreKoalas) {
+//   console.log(`Dolphines win trophy 😎`);
+// } else if (scoreKoalas >= 100 && scoreKoalas > scoreDlphine) {
+//   console.log(`Koalas win trophy 😎`);
+// } else if (
+//   scoreDlphine === scoreKoalas &&
+//   scoreDlphine >= 100 &&
+//   scoreKoalas >= 100
+// ) {
+//   console.log(`Both team win trophy 😂`);
+// } else {
+//   console.log(`Theye're not win the trophy 👀`);
+// }
+
+// The switch Statement
+
+// const day = "monday";
+// const day = prompt("pleas write the day?");
+
+// switch (day) {
+//   case "monday":
+//     console.log("Plan course struc");
+//     console.log("Go to coding meetup");
+//     break;
+//   case "tuesday":
+//     console.log("Prepare theory videos");
+//     break;
+//   case "wednesday":
+//   case "thursday":
+//     console.log("write code examples");
+//     break;
+//   case "friday":
+//     console.log("Record videos");
+//     break;
+//   case "saturday":
+//   case "sunday":
+//     console.log("Enjoy the weekend :D");
+//     break;
+//   default:
+//     console.log("Not a calid day");
+// }
+
+const day = prompt("pleas write the day?");
+
+if (day === "monday") {
+  console.log("Plan course struc");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend :D");
 } else {
-  console.log(`Theye're not win the trophy 👀`);
+  console.log("Not a Valid day");
 }
