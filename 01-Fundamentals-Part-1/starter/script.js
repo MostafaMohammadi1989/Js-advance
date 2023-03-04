@@ -504,19 +504,33 @@ GOOD LUCK 😀
 //     console.log("Not a calid day");
 // }
 
-const day = prompt("pleas write the day?");
+// const day = prompt("pleas write the day?");
 
-if (day === "monday") {
-  console.log("Plan course struc");
-  console.log("Go to coding meetup");
-} else if (day === "tuesday") {
-  console.log("Prepare theory videos");
-} else if (day === "wednesday" || day === "thursday") {
-  console.log("write code examples");
-} else if (day === "friday") {
-  console.log("Record videos");
-} else if (day === "saturday" || day === "sunday") {
-  console.log("Enjoy the weekend :D");
+// if (day === "monday") {
+//   console.log("Plan course struc");
+//   console.log("Go to coding meetup");
+// } else if (day === "tuesday") {
+//   console.log("Prepare theory videos");
+// } else if (day === "wednesday" || day === "thursday") {
+//   console.log("write code examples");
+// } else if (day === "friday") {
+//   console.log("Record videos");
+// } else if (day === "saturday" || day === "sunday") {
+//   console.log("Enjoy the weekend :D");
+// } else {
+//   console.log("Not a Valid day");
+// }
+
+const age = 13;
+
+const drink = age >= 18 ? "I like drink win 🍷" : "I like drink water 💧";
+
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "I like drink win 🍷";
 } else {
-  console.log("Not a Valid day");
+  drink2 = "I like drink water 💧";
 }
+console.log(drink2);
