@@ -6,24 +6,42 @@
 // if (passTest) hasDriverLicense = true;
 // if (hasDriversLicense) console.log("I can drive :)");
 
-function myName() {
-  console.log("Meisam");
+// function myName() {
+//   console.log("Meisam");
+// }
+
+// myName();
+// myName();
+// myName();
+
+// function fruitProccesor(apples, oranges) {
+//   //   console.log(apples, oranges);
+
+//   const juice = `We have ${apples} and other fruits have ${oranges}`;
+
+//   return juice;
+// }
+
+// const applesAndOranges = fruitProccesor(5, 2);
+// console.log(applesAndOranges);
+
+// const juices = fruitProccesor(10, 6);
+// console.log(juices);
+
+//Function Decaration
+
+function clacAge1(birthday) {
+  return 2023 - birthday;
 }
 
-myName();
-myName();
-myName();
+const age1 = clacAge1(1991);
+console.log(age1);
 
-function fruitProccesor(apples, oranges) {
-  //   console.log(apples, oranges);
+//Function Exprestion
 
-  const juice = `We have ${apples} and other fruits have ${oranges}`;
+const clacAge2 = function (birthday) {
+  return 2023 - birthday;
+};
 
-  return juice;
-}
-
-const applesAndOranges = fruitProccesor(5, 2);
-console.log(applesAndOranges);
-
-const juices = fruitProccesor(10, 6);
-console.log(juices);
+const age2 = clacAge2(1991);
+console.log(age2);
