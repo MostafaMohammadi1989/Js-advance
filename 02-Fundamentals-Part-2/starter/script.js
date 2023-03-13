@@ -63,16 +63,38 @@
 
 //Function calling other function
 
-const fruitCuts = (fruit) => {
-  return fruit * 4;
+// const fruitCuts = (fruit) => {
+//   return fruit * 4;
+// };
+
+// const fruitProccessor = (apples, oranges) => {
+//   const applesPice = fruitCuts(apples);
+//   const orangesPice = fruitCuts(oranges);
+//   const juice = `Juice makeing a ${applesPice} apples and ${orangesPice} orange`;
+//   return juice;
+// };
+
+// console.log(fruitProccessor(2, 3));
+// console.log(fruitProccessor(5, 4));
+
+// Reveiw funtion
+
+const clacAge = (brithday) => {
+  return 2037 - brithday; //46
 };
 
-const fruitProccessor = (apples, oranges) => {
-  const applesPice = fruitCuts(apples);
-  const orangesPice = fruitCuts(oranges);
-  const juice = `Juice makeing a ${applesPice} apples and ${orangesPice} orange`;
-  return juice;
+const retirmentUntilAge = (brithday, firstname) => {
+  const age = clacAge(brithday); //46
+  const retirment = 65 - age; //65 - 46
+  if (retirment > 0) {
+    console.log(`${firstname} it has  ${retirment} years to retirment. `);
+  } else {
+    console.log(`${firstname} it's to retirment`);
+    return -1;
+  }
 };
 
-console.log(fruitProccessor(2, 3));
-console.log(fruitProccessor(5, 4));
+console.log(retirmentUntilAge(1991, "Meisam"));
+// console.log(retirmentUntilAge(2000, "Meisam"));
+
+// 2037 - 1991 = 46
