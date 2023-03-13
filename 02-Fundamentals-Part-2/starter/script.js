@@ -30,18 +30,33 @@
 
 //Function Decaration
 
-function clacAge1(birthday) {
-  return 2023 - birthday;
-}
+// function clacAge1(birthday) {
+//   return 2023 - birthday;
+// }
 
-const age1 = clacAge1(1991);
-console.log(age1);
+// const age1 = clacAge1(1991);
+// console.log(age1);
 
-//Function Exprestion
+// //Function Exprestion
 
-const clacAge2 = function (birthday) {
-  return 2023 - birthday;
+// const clacAge2 = function (birthday) {
+//   return 2023 - birthday;
+// };
+
+// const age2 = clacAge2(1991);
+// console.log(age2);
+
+// Arrow Function
+
+const age3 = (brithday) => 2037 - brithday;
+const calcAge1 = age3(1989);
+console.log(calcAge1);
+
+const retirmentUntilAge = (brithday, firstname, job) => {
+  const age = 2037 - brithday;
+  const retirment = 65 - age;
+  return `${firstname} is work about ${job} untile ${retirment} years to retierment`;
 };
 
-const age2 = clacAge2(1991);
-console.log(age2);
+console.log(retirmentUntilAge(1989, "Meisam", "Chef"));
+console.log(retirmentUntilAge(1980, "Majid", "Computer programing"));
