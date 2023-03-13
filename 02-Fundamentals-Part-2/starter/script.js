@@ -48,15 +48,31 @@
 
 // Arrow Function
 
-const age3 = (brithday) => 2037 - brithday;
-const calcAge1 = age3(1989);
-console.log(calcAge1);
+// const age3 = (brithday) => 2037 - brithday;
+// const calcAge1 = age3(1989);
+// console.log(calcAge1);
 
-const retirmentUntilAge = (brithday, firstname, job) => {
-  const age = 2037 - brithday;
-  const retirment = 65 - age;
-  return `${firstname} is work about ${job} untile ${retirment} years to retierment`;
+// const retirmentUntilAge = (brithday, firstname, job) => {
+//   const age = 2037 - brithday;
+//   const retirment = 65 - age;
+//   return `${firstname} is work about ${job} untile ${retirment} years to retierment`;
+// };
+
+// console.log(retirmentUntilAge(1989, "Meisam", "Chef"));
+// console.log(retirmentUntilAge(1980, "Majid", "Computer programing"));
+
+//Function calling other function
+
+const fruitCuts = (fruit) => {
+  return fruit * 4;
 };
 
-console.log(retirmentUntilAge(1989, "Meisam", "Chef"));
-console.log(retirmentUntilAge(1980, "Majid", "Computer programing"));
+const fruitProccessor = (apples, oranges) => {
+  const applesPice = fruitCuts(apples);
+  const orangesPice = fruitCuts(oranges);
+  const juice = `Juice makeing a ${applesPice} apples and ${orangesPice} orange`;
+  return juice;
+};
+
+console.log(fruitProccessor(2, 3));
+console.log(fruitProccessor(5, 4));
