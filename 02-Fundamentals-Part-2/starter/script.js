@@ -143,25 +143,58 @@ let scoreKoalas = calcAverage(23, 30, 20);
 // to the console, together with the victory points, according to the rule above.
 // Example: "Koalas win (30 vs. 13)"
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-  } else {
-    // if (avgDolphins < 2 * avgKoalas || avgKoalas < 2 * avgDolphins)
-    // console.log(
-    //   `together with the victory points Dolphins Score is ${avgDolphins} and Koales Score is ${avgKoalas}`
-    // );
-    // return;
-    console.log(`No team wins`);
-  }
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//   } else {
+//     // if (avgDolphins < 2 * avgKoalas || avgKoalas < 2 * avgDolphins)
+//     // console.log(
+//     //   `together with the victory points Dolphins Score is ${avgDolphins} and Koales Score is ${avgKoalas}`
+//     // );
+//     // return;
+//     console.log(`No team wins`);
+//   }
+// };
+
+// checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(537, 222);
+
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(23, 30, 20);
+// console.log(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
+
+//Array introduce
+// const years = new Array(1992, 1989, 2000, 2023);
+// console.log(years);
+const friends = ["Majid", "Adel", "Navid"];
+const firstnName = "Meisam";
+const meisam = [firstnName, "Mohammdi", 2023 - 1989, "Teacher", friends];
+console.log(meisam);
+console.log(meisam.length);
+console.log(meisam[meisam.length - 1]);
+console.log(meisam[2]);
+console.log(meisam[4][0]);
+
+friends[1] = "Porya";
+console.log(friends);
+
+const clacAge = (brithday) => {
+  return 2037 - brithday;
 };
 
-checkWinner(scoreDolphins, scoreKoalas);
-checkWinner(537, 222);
+const years = [1991, 1989, 1999, 2000];
+const age1 = clacAge(years[0]);
+const age2 = clacAge(years[1]);
+const age3 = clacAge(years[years.length - 1]);
+console.log(age1, age2, age3);
 
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 30, 20);
-console.log(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins, scoreKoalas);
+const ages = [
+  clacAge(years[0]),
+  clacAge(years[1]),
+  clacAge(years[years.length - 1]),
+];
+
+console.log("ages =>", ages);
