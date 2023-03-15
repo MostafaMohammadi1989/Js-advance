@@ -240,3 +240,75 @@ if (friends.includes("Navid")) {
 }
 
 */
+
+/* 
+Coding Chalenge NUM 2
+
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is
+20%.
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns
+the corresponding tip, calculated based on the rules above (you can check out
+the code from first tip calculator challenge if you need to). Use the function
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+Test data: 125, 555 and 44
+Hint: Remember that an array needs a value in each position, and that value can
+actually be the returned value of a function! So you can just call a function as array
+values (so don't store the tip values in separate variables first, but right in the new
+array) 😉
+GOOD LUCK 😀
+*/
+
+// const clacTip = function (bill) {
+//   let tip;
+//   let total;
+//   if (bill >= 50 && bill <= 300) {
+//     tip = bill * 0.15;
+//     total = bill + tip;
+//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
+//        ${total}`);
+//   } else if (bill > 300) {
+//     tip = bill * 0.2;
+//     total = bill + tip;
+//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
+//     ${total}`);
+//   }
+// };
+
+// clacTip(300);
+// clacTip(500);
+// clacTip(100);
+// clacTip(arrBills[0]);
+// clacTip(arrBills[1]);
+// clacTip(arrBills[2]);
+// clacTip(arrBills[arrBills.length - 1]);
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+const arrBills = [300, 200, 400, 100, 500, 50];
+const arrTips = [
+  calcTip(arrBills[0]),
+  calcTip(arrBills[1]),
+  calcTip(arrBills[2]),
+  calcTip(arrBills[3]),
+  calcTip(arrBills[4]),
+  calcTip(arrBills[5]),
+];
+
+const total = [
+  arrBills[0] + calcTip(arrBills[0]),
+  arrBills[1] + calcTip(arrBills[1]),
+  arrBills[2] + calcTip(arrBills[2]),
+  arrBills[3] + calcTip(arrBills[3]),
+  arrBills[4] + calcTip(arrBills[4]),
+  arrBills[5] + calcTip(arrBills[5]),
+];
+console.log(arrBills, arrTips, total);
+console.log(total);
