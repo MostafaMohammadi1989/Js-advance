@@ -169,32 +169,74 @@ let scoreKoalas = calcAverage(23, 30, 20);
 //Array introduce
 // const years = new Array(1992, 1989, 2000, 2023);
 // console.log(years);
-const friends = ["Majid", "Adel", "Navid"];
-const firstnName = "Meisam";
-const meisam = [firstnName, "Mohammdi", 2023 - 1989, "Teacher", friends];
-console.log(meisam);
-console.log(meisam.length);
-console.log(meisam[meisam.length - 1]);
-console.log(meisam[2]);
-console.log(meisam[4][0]);
+// const friends = ["Majid", "Adel", "Navid"];
+// const firstnName = "Meisam";
+// const meisam = [firstnName, "Mohammdi", 2023 - 1989, "Teacher", friends];
+// console.log(meisam);
+// console.log(meisam.length);
+// console.log(meisam[meisam.length - 1]);
+// console.log(meisam[2]);
+// console.log(meisam[4][0]);
 
-friends[1] = "Porya";
+// friends[1] = "Porya";
+// console.log(friends);
+
+// const clacAge = (brithday) => {
+//   return 2037 - brithday;
+// };
+
+// const years = [1991, 1989, 1999, 2000];
+// const age1 = clacAge(years[0]);
+// const age2 = clacAge(years[1]);
+// const age3 = clacAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+
+// const ages = [
+//   clacAge(years[0]),
+//   clacAge(years[1]),
+//   clacAge(years[years.length - 1]),
+// ];
+
+// console.log("ages =>", ages);
+
+/*
+//Built in Function
+const friends = ["Peter", "Meisam", "Majid", "Adel"];
 console.log(friends);
 
-const clacAge = (brithday) => {
-  return 2037 - brithday;
-};
+// Add
+friends.push("Navid");
+console.log(friends);
 
-const years = [1991, 1989, 1999, 2000];
-const age1 = clacAge(years[0]);
-const age2 = clacAge(years[1]);
-const age3 = clacAge(years[years.length - 1]);
-console.log(age1, age2, age3);
+friends.unshift("Jonas");
+console.log(friends);
 
-const ages = [
-  clacAge(years[0]),
-  clacAge(years[1]),
-  clacAge(years[years.length - 1]),
-];
+console.log(friends.length);
 
-console.log("ages =>", ages);
+const newLength = friends.unshift();
+console.log(newLength);
+
+//Remove
+
+friends.pop();
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+const poped = friends.shift();
+console.log(poped);
+console.log(friends);
+
+console.log(friends.indexOf("Majid"));
+
+console.log(friends.includes("Majid"));
+console.log(friends.includes("Navid"));
+
+if (friends.includes("Navid")) {
+  console.log("You find a good friend");
+} else {
+  console.log(`You can't find a friend`);
+}
+
+*/
