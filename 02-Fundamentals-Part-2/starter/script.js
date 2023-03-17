@@ -271,13 +271,11 @@ GOOD LUCK 😀
 //   if (bill >= 50 && bill <= 300) {
 //     tip = bill * 0.15;
 //     total = bill + tip;
-//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
-//        ${total}`);
+//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${total}`);
 //   } else if (bill > 300) {
 //     tip = bill * 0.2;
 //     total = bill + tip;
-//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
-//     ${total}`);
+//     console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${total}`);
 //   }
 // };
 
@@ -289,26 +287,98 @@ GOOD LUCK 😀
 // clacTip(arrBills[2]);
 // clacTip(arrBills[arrBills.length - 1]);
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-};
-const arrBills = [300, 200, 400, 100, 500, 50];
-const arrTips = [
-  calcTip(arrBills[0]),
-  calcTip(arrBills[1]),
-  calcTip(arrBills[2]),
-  calcTip(arrBills[3]),
-  calcTip(arrBills[4]),
-  calcTip(arrBills[5]),
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+// const arrBills = [300, 200, 400, 100, 500, 50];
+// const arrTips = [
+//   calcTip(arrBills[0]),
+//   calcTip(arrBills[1]),
+//   calcTip(arrBills[2]),
+//   calcTip(arrBills[3]),
+//   calcTip(arrBills[4]),
+//   calcTip(arrBills[5]),
+// ];
+
+// const total = [
+//   arrBills[0] + calcTip(arrBills[0]),
+//   arrBills[1] + calcTip(arrBills[1]),
+//   arrBills[2] + calcTip(arrBills[2]),
+//   arrBills[3] + calcTip(arrBills[3]),
+//   arrBills[4] + calcTip(arrBills[4]),
+//   arrBills[5] + calcTip(arrBills[5]),
+// ];
+// console.log(arrBills, arrTips, total);
+// console.log(total);
+
+/*
+const meisamArr = [
+  "Meisam",
+  "Mohammadi",
+  2023 - 1989,
+  "teacher",
+  ["Peter", "Majid", "Steven"],
 ];
 
-const total = [
-  arrBills[0] + calcTip(arrBills[0]),
-  arrBills[1] + calcTip(arrBills[1]),
-  arrBills[2] + calcTip(arrBills[2]),
-  arrBills[3] + calcTip(arrBills[3]),
-  arrBills[4] + calcTip(arrBills[4]),
-  arrBills[5] + calcTip(arrBills[5]),
-];
-console.log(arrBills, arrTips, total);
-console.log(total);
+const meisam = {
+  firstName: "Meisam",
+  lastName: "Mohammadi",
+  age: 2023 - 1989,
+  job: "teacher",
+  friends: ["Peter", "Majid", "Steven"],
+};
+
+console.log(meisam.friends[meisam.friends.length - 1]);
+*/
+
+const meisam = {
+  firstName: "Meisam",
+  lastName: "Mohammadi",
+  age: 2023 - 1989,
+  job: "teacher",
+  friends: ["Peter", "Majid", "Steven"],
+};
+
+// console.log(meisam.firstName);
+// console.log(meisam.friends[1]);
+
+// console.log(meisam["lastName"]);
+
+// const nameKey = "Name";
+
+// console.log(meisam["first" + nameKey]);
+// console.log(meisam["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "What do you know about Meisam, Choose the one of them elemen in the text, firstName, lastName, age, job, friends"
+// );
+
+// console.log(meisam[interestedIn]);
+
+// if (meisam[interestedIn]) {
+//   console.log(meisam[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong question, Choose the one of them elemen in the text, firstName, lastName, age, job, friends"
+//   );
+// }
+
+meisam["location"] = "California";
+meisam.hobbie = "Tenis";
+meisam["twitter"] = "@meisam1989";
+console.log(meisam);
+
+// if (meisam[interestedIn]) {
+//   console.log(meisam[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong question, Choose the one of them elemen in the text, firstName, lastName, age, job, friends"
+//   );
+// }
+
+// Challenge
+// " Meisam has 3 friends, and his best friend is called Majid"
+
+console.log(
+  `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
+);
