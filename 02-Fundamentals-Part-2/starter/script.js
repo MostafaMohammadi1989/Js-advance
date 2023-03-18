@@ -391,14 +391,36 @@ const meisam = {
   job: "teacher",
   friends: ["Peter", "Majid", "Steven"],
   driverLicense: true,
+  // calcAge: function() {
+  //   console.log(this)
+  //   return 2023 - this.brithYear
+  // },
+  // calcAge2: function() {
+  //   return this.year - this.brithYear
+  // }
+
   calcAge: function() {
-    console.log(this)
-    return 2023 - this.brithYear
+    this.age = 2023 - this.brithYear;
+    return this.age
   },
-  calcAge2: function() {
-    return this.year - this.brithYear
+  // driverLicenseMeisam: function() {
+  //   if ( this.driverLicense) {
+  //     return 'a'
+  //   } else {
+  //     return 'no'
+  //   }
+  // }
+  getSummary: function() {
+    this.summary = `${this.firstName} is  a ${this.calcAge()}-year old ${this.job}, and he has ${this.driverLicense ? 'a' : 'no'} driver's license`
+    return this.summary
   }
 };
+console.log(meisam.getSummary())
 
-console.log(meisam.calcAge())
-console.log(meisam.calcAge2())
+// console.log(meisam.calcAge2())
+// console.log(meisam.calcAge())
+
+// Challenge
+// "Meisam is a 46-year old teacher, and he has a/no driver's license"
+
+// console.log(`${meisam.firstName} is a ${meisam.calcAge()}-year old ${meisam.job}, and he has ${meisam.driverLicenseMeisam()} driver's Licens`)
