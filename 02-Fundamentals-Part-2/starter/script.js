@@ -130,13 +130,13 @@ GOOD LUCK 😀
 
 // 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
 
-const calcAverage = (s1, s2, s3) => {
-  return (s1 + s2 + s3) / 3;
-};
+// const calcAverage = (s1, s2, s3) => {
+//   return (s1 + s2 + s3) / 3;
+// };
 // 2. Use the function to calculate the average for both teams
 
-let scoreDolphins = calcAverage(35, 54, 41);
-let scoreKoalas = calcAverage(23, 30, 20);
+// let scoreDolphins = calcAverage(35, 54, 41);
+// let scoreKoalas = calcAverage(23, 30, 20);
 
 // 3. Create a function 'checkWinner' that takes the average score of each team
 // as parameters ('avgDolphins' and 'avgKoalas'), and then logs the winner
@@ -331,13 +331,13 @@ const meisam = {
 console.log(meisam.friends[meisam.friends.length - 1]);
 */
 
-const meisam = {
-  firstName: "Meisam",
-  lastName: "Mohammadi",
-  age: 2023 - 1989,
-  job: "teacher",
-  friends: ["Peter", "Majid", "Steven"],
-};
+// const meisam = {
+//   firstName: "Meisam",
+//   lastName: "Mohammadi",
+//   age: 2023 - 1989,
+//   job: "teacher",
+//   friends: ["Peter", "Majid", "Steven"],
+// };
 
 // console.log(meisam.firstName);
 // console.log(meisam.friends[1]);
@@ -363,10 +363,10 @@ const meisam = {
 //   );
 // }
 
-meisam["location"] = "California";
-meisam.hobbie = "Tenis";
-meisam["twitter"] = "@meisam1989";
-console.log(meisam);
+// meisam["location"] = "California";
+// meisam.hobbie = "Tenis";
+// meisam["twitter"] = "@meisam1989";
+// console.log(meisam);
 
 // if (meisam[interestedIn]) {
 //   console.log(meisam[interestedIn]);
@@ -379,10 +379,26 @@ console.log(meisam);
 // Challenge
 // " Meisam has 3 friends, and his best friend is called Majid"
 
-console.log(
-  `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
-);
+// console.log(
+//   `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
+// );
 
-console.log(
-  `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
-);
+const meisam = {
+  firstName: "Meisam",
+  lastName: "Mohammadi",
+  brithYear: 1989,
+  year: 2023,
+  job: "teacher",
+  friends: ["Peter", "Majid", "Steven"],
+  driverLicense: true,
+  calcAge: function() {
+    console.log(this)
+    return 2023 - this.brithYear
+  },
+  calcAge2: function() {
+    return this.year - this.brithYear
+  }
+};
+
+console.log(meisam.calcAge())
+console.log(meisam.calcAge2())
