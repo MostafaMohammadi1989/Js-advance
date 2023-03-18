@@ -382,3 +382,7 @@ console.log(meisam);
 console.log(
   `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
 );
+
+console.log(
+  `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
+);
