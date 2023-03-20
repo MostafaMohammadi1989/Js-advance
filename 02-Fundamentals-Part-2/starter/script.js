@@ -499,6 +499,33 @@ GOOD LUCK 😀
 
 // loops
 
-for ( let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights reptition  ${rep} 🏋️‍♀️`)
+// for ( let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights reptition  ${rep} 🏋️‍♀️`)
+// }
+
+
+
+
+// const meisam = {
+//     firstName: "Meisam",
+//     lastName: "Mohammadi",
+//     brithYear: 1989,
+//     year: 2023,
+//     job: "teacher",
+//     friends: ["Peter", "Majid", "Steven"],
+//     driverLicense: true,
+// }
+
+const type = [];
+
+const arrMeisam = ['Meisam', 'Mohammadi', 1989, 'teacher', ['Petter', 'Majid', 'Adel'], true]
+
+//filling type arrary
+for ( let i = 0; i < arrMeisam.length; i++) {
+  console.log(arrMeisam[i], typeof arrMeisam[i])
+
+  // type[i] = typeof arrMeisam[i]
+  type.push(typeof arrMeisam[i])
 }
+
+console.log(type)
