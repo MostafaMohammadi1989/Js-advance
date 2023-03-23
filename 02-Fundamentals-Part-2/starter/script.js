@@ -531,13 +531,13 @@ GOOD LUCK 😀
 // console.log(type)
 
 
-const years = [1989, 1990, 1992, 1930];
-const ages = [];
+// const years = [1989, 1990, 1992, 1930];
+// const ages = [];
 
-for (let i = 0; i < years.length; i++) {
-  ages.push(2037 - years[i])
-}
-console.log(ages)
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i])
+// }
+// console.log(ages)
 
 /*
 years[i] === years[0] => i = 0; 2037 - 1989 = 48  => ages [48]
@@ -545,3 +545,25 @@ years[i] === years[1] => i = 1; 2037 - 1990 = 47  => ages [48, 47]
 years[i] === years[2] => i = 2; 2037 - 1992 = 45  => ages [48, 47, 45]
 years[i] === years[3] => i = 3; 2037 - 1930 = 107 => ages [48, 47, 45, 107]
 */
+
+
+const meisam = [
+  "Meisam",
+  "Mohammadi",
+  2023 - 1989,
+  "teacher",
+  ["Peter", "Majid", "Steven"],
+];
+
+  console.log("--Only String--")
+  for ( let i = 0; i < meisam.length; i++) {
+    if ( typeof meisam[i] !== 'string') continue;
+
+    console.log(meisam[i], typeof meisam[i]);
+  }
+
+  console.log("--- Only Number ---")
+  for (let i = 0; i < meisam.length; i++) {
+    if ( typeof meisam[i] === 'number') break;
+    console.log(meisam[i], typeof meisam[i])
+  }
