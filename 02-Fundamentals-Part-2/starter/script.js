@@ -516,16 +516,32 @@ GOOD LUCK 😀
 //     driverLicense: true,
 // }
 
-const type = [];
+// const type = [];
 
-const arrMeisam = ['Meisam', 'Mohammadi', 1989, 'teacher', ['Petter', 'Majid', 'Adel'], true]
+// const arrMeisam = ['Meisam', 'Mohammadi', 1989, 'teacher', ['Petter', 'Majid', 'Adel'], true]
 
-//filling type arrary
-for ( let i = 0; i < arrMeisam.length; i++) {
-  console.log(arrMeisam[i], typeof arrMeisam[i])
+// //filling type arrary
+// for ( let i = 0; i < arrMeisam.length; i++) {
+//   console.log(arrMeisam[i], typeof arrMeisam[i])
 
-  // type[i] = typeof arrMeisam[i]
-  type.push(typeof arrMeisam[i])
+//   // type[i] = typeof arrMeisam[i]
+//   type.push(typeof arrMeisam[i])
+// }
+
+// console.log(type)
+
+
+const years = [1989, 1990, 1992, 1930];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i])
 }
+console.log(ages)
 
-console.log(type)
+/*
+years[i] === years[0] => i = 0; 2037 - 1989 = 48  => ages [48]
+years[i] === years[1] => i = 1; 2037 - 1990 = 47  => ages [48, 47]
+years[i] === years[2] => i = 2; 2037 - 1992 = 45  => ages [48, 47, 45]
+years[i] === years[3] => i = 3; 2037 - 1930 = 107 => ages [48, 47, 45, 107]
+*/
