@@ -547,23 +547,49 @@ years[i] === years[3] => i = 3; 2037 - 1930 = 107 => ages [48, 47, 45, 107]
 */
 
 
-const meisam = [
-  "Meisam",
-  "Mohammadi",
-  2023 - 1989,
-  "teacher",
-  ["Peter", "Majid", "Steven"],
-];
+// const meisam = [
+//   "Meisam",
+//   "Mohammadi",
+//   2023 - 1989,
+//   "teacher",
+//   ["Peter", "Majid", "Steven"],
+// ];
 
-  console.log("--Only String--")
-  for ( let i = 0; i < meisam.length; i++) {
-    if ( typeof meisam[i] !== 'string') continue;
+  // console.log("--Only String--")
+  // for ( let i = 0; i < meisam.length; i++) {
+  //   if ( typeof meisam[i] !== 'string') continue;
 
-    console.log(meisam[i], typeof meisam[i]);
+  //   console.log(meisam[i], typeof meisam[i]);
+  // }
+
+  // console.log("--- Only Number ---")
+  // for (let i = 0; i < meisam.length; i++) {
+  //   if ( typeof meisam[i] === 'number') break;
+  //   console.log(meisam[i], typeof meisam[i])
+  // }
+
+  
+//   const meisam = [
+//     "Meisam",
+//     "Mohammadi",
+//     2023 - 1989,
+//     "teacher",
+//     ["Peter", "Majid", "Steven"],
+//   ];
+
+//   // 0, 1, 2, 3, 4
+//   // 4, 3, 2, 1 
+// console.log(meisam.length)
+//   for (let i = meisam.length - 1; i >= 0; i-- ){
+//     console.log(i, meisam[i])
+//   }
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-----------Starting Exercise ${exercise}`)
+  for (let rep = 1; rep < 5; rep++) {
+    console.log(`Exercise ${exercise} : Lifting weight repetition 🏋️‍♂️`)
+    for (let best = 1; best < 3; best++) {
+      console.log(`Exercise ${exercise} : repetition ${rep} => and finaly this is a ${best}`)
+    }
   }
-
-  console.log("--- Only Number ---")
-  for (let i = 0; i < meisam.length; i++) {
-    if ( typeof meisam[i] === 'number') break;
-    console.log(meisam[i], typeof meisam[i])
-  }
+}
