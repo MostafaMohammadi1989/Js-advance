@@ -130,13 +130,13 @@ GOOD LUCK 😀
 
 // 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
 
-const calcAverage = (s1, s2, s3) => {
-  return (s1 + s2 + s3) / 3;
-};
-// 2. Use the function to calculate the average for both teams
+// const calcAverage = (s1, s2, s3) => {
+//   return (s1 + s2 + s3) / 3;
+// };
+// // 2. Use the function to calculate the average for both teams
 
-let scoreDolphins = calcAverage(35, 54, 41);
-let scoreKoalas = calcAverage(23, 30, 20);
+// let scoreDolphins = calcAverage(35, 54, 41);
+// let scoreKoalas = calcAverage(23, 30, 20);
 
 // 3. Create a function 'checkWinner' that takes the average score of each team
 // as parameters ('avgDolphins' and 'avgKoalas'), and then logs the winner
@@ -331,13 +331,13 @@ const meisam = {
 console.log(meisam.friends[meisam.friends.length - 1]);
 */
 
-const meisam = {
-  firstName: "Meisam",
-  lastName: "Mohammadi",
-  age: 2023 - 1989,
-  job: "teacher",
-  friends: ["Peter", "Majid", "Steven"],
-};
+// const meisam = {
+//   firstName: "Meisam",
+//   lastName: "Mohammadi",
+//   age: 2023 - 1989,
+//   job: "teacher",
+//   friends: ["Peter", "Majid", "Steven"],
+// };
 
 // console.log(meisam.firstName);
 // console.log(meisam.friends[1]);
@@ -363,10 +363,10 @@ const meisam = {
 //   );
 // }
 
-meisam["location"] = "California";
-meisam.hobbie = "Tenis";
-meisam["twitter"] = "@meisam1989";
-console.log(meisam);
+// meisam["location"] = "California";
+// meisam.hobbie = "Tenis";
+// meisam["twitter"] = "@meisam1989";
+// console.log("This log for meisam ", meisam);
 
 // if (meisam[interestedIn]) {
 //   console.log(meisam[interestedIn]);
@@ -379,6 +379,41 @@ console.log(meisam);
 // Challenge
 // " Meisam has 3 friends, and his best friend is called Majid"
 
-console.log(
-  `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
-);
+// console.log(
+//   `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
+// );
+
+const meisam = {
+  firstName: "Meisam",
+  lastName: "Mohammadi",
+  // age: 2023 - 1989,
+  brithYear: 1989,
+  job: "teacher",
+  friends: ["Peter", "Majid", "Steven"],
+  hasDriverLicense: false,
+  calcAge: function () {
+    this.age = 2023 - this.brithYear;
+    return this.age;
+  },
+  getSummary: function () {
+    this.summary = `${
+      this.firstName
+    } is a ${this.calcAge()} - years old and he is a ${this.job}, and he has ${
+      this.hasDriverLicense ? "a" : "no"
+    } driver's license`;
+    return this.summary;
+  },
+};
+console.log(meisam.getSummary());
+console.log(meisam.summary);
+// console.log(meisam.calcAge(1989));
+// console.log(meisam["calcAge"](1990));
+// console.log(meisam.calcAge());
+// console.log(meisam.age);
+// Challenge
+// "Meisam is a 34 years old teacher, and he has a/no driver's license"
+// console.log(
+//   `${meisam.firstName} is a ${meisam.age}-years old and he job is ${
+//     meisam.job
+//   }, and he has ${meisam.hasDriverLicense ? "a" : "no"} driver's license`
+// );
