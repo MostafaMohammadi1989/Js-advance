@@ -133,7 +133,11 @@ GOOD LUCK 😀
 // const calcAverage = (s1, s2, s3) => {
 //   return (s1 + s2 + s3) / 3;
 // };
+// <<<<<<< HEAD
 // // 2. Use the function to calculate the average for both teams
+// =======
+// 2. Use the function to calculate the average for both teams
+// >>>>>>> 6b409ae326153a5bab6887ded0c8f3b16aafc579
 
 // let scoreDolphins = calcAverage(35, 54, 41);
 // let scoreKoalas = calcAverage(23, 30, 20);
@@ -366,7 +370,11 @@ console.log(meisam.friends[meisam.friends.length - 1]);
 // meisam["location"] = "California";
 // meisam.hobbie = "Tenis";
 // meisam["twitter"] = "@meisam1989";
+// <<<<<<< HEAD
 // console.log("This log for meisam ", meisam);
+// =======
+// console.log(meisam);
+// >>>>>>> 6b409ae326153a5bab6887ded0c8f3b16aafc579
 
 // if (meisam[interestedIn]) {
 //   console.log(meisam[interestedIn]);
@@ -383,29 +391,30 @@ console.log(meisam.friends[meisam.friends.length - 1]);
 //   `${meisam["firstName"]} has ${meisam.friends.length}, and his best friend is called ${meisam.friends[1]}`
 // );
 
-const meisam = {
-  firstName: "Meisam",
-  lastName: "Mohammadi",
-  // age: 2023 - 1989,
-  brithYear: 1989,
-  job: "teacher",
-  friends: ["Peter", "Majid", "Steven"],
-  hasDriverLicense: false,
-  calcAge: function () {
-    this.age = 2023 - this.brithYear;
-    return this.age;
-  },
-  getSummary: function () {
-    this.summary = `${
-      this.firstName
-    } is a ${this.calcAge()} - years old and he is a ${this.job}, and he has ${
-      this.hasDriverLicense ? "a" : "no"
-    } driver's license`;
-    return this.summary;
-  },
-};
-console.log(meisam.getSummary());
-console.log(meisam.summary);
+// <<<<<<< HEAD
+// const meisam = {
+//   firstName: "Meisam",
+//   lastName: "Mohammadi",
+//   // age: 2023 - 1989,
+//   brithYear: 1989,
+//   job: "teacher",
+//   friends: ["Peter", "Majid", "Steven"],
+//   hasDriverLicense: false,
+//   calcAge: function () {
+//     this.age = 2023 - this.brithYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     this.summary = `${
+//       this.firstName
+//     } is a ${this.calcAge()} - years old and he is a ${this.job}, and he has ${
+//       this.hasDriverLicense ? "a" : "no"
+//     } driver's license`;
+//     return this.summary;
+//   },
+// };
+// console.log(meisam.getSummary());
+// console.log(meisam.summary);
 // console.log(meisam.calcAge(1989));
 // console.log(meisam["calcAge"](1990));
 // console.log(meisam.calcAge());
@@ -417,3 +426,202 @@ console.log(meisam.summary);
 //     meisam.job
 //   }, and he has ${meisam.hasDriverLicense ? "a" : "no"} driver's license`
 // );
+// =======
+// const meisam = {
+//   firstName: "Meisam",
+//   lastName: "Mohammadi",
+//   brithYear: 1989,
+//   year: 2023,
+//   job: "teacher",
+//   friends: ["Peter", "Majid", "Steven"],
+//   driverLicense: true,
+//   calcAge: function() {
+//     console.log(this)
+//     return 2023 - this.brithYear
+//   },
+// calcAge2: function() {
+//   return this.year - this.brithYear
+// }
+
+// calcAge: function() {
+//   this.age = 2023 - this.brithYear;
+//   return this.age
+// },
+// driverLicenseMeisam: function() {
+//   if ( this.driverLicense) {
+//     return 'a'
+//   } else {
+//     return 'no'
+//   }
+// },
+//   getSummary: function() {
+//     this.summary = `${this.firstName} is  a ${this.calcAge()}-year old ${this.job}, and he has ${this.driverLicense ? 'a' : 'no'} driver's license`
+//     return this.summary
+//   }
+// };
+// console.log(meisam.getSummary())
+
+// console.log(meisam.calcAge2())
+// console.log(meisam.calcAge())
+
+// Challenge
+// "Meisam is a 46-year old teacher, and he has a/no driver's license"
+
+// console.log(`${meisam.firstName} is a ${meisam.calcAge()}-year old ${meisam.job}, and he has ${meisam.driverLicenseMeisam()} driver's Licens`)
+
+// meisam.location = 'Califonia'
+// console.log(meisam)
+
+/*
+Coding Challenge #3
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
+implement the calculations! Remember: BMI = mass / height ** 2 = mass
+/ (height * height) (mass in kg and height in meter)
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and
+height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+method on both objects). Store the BMI value to a property, and also return it
+from the method
+3. Log to the console who has the higher BMI, together with the full name and the
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
+tall.
+GOOD LUCK 😀
+*/
+
+// const markmiller = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function() {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi
+//   }
+// }
+
+// const johnSmith = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function() {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi
+//   }
+// }
+// markmiller.calcBMI()
+// johnSmith.calcBMI()
+// console.log(markmiller.bmi, johnSmith.bmi)
+
+// if (markmiller.bmi > johnSmith.bmi) {
+//   console.log(`${markmiller.fullName} BMI (${markmiller.bmi}) is higher than ${johnSmith.fullName} BMI ${johnSmith.bmi} `)
+// } else if ( johnSmith.bmi > markmiller.bmi) {
+//   console.log(`${johnSmith.fullName} BMI (${johnSmith.bmi}) is higher than ${markmiller.fullName} BMI ${markmiller.bmi} `)
+// }
+
+// const calcBmi = function(mass, height) {
+//   return mass / height **2
+// }
+
+// const markBMI = calcBmi(markmiller.mass, markmiller.height)
+// const johnBMI = calcBmi(johnSmith.mass, johnSmith.height)
+
+//  console.log(calcBmi(markmiller.mass, markmiller.height))
+// console.log(markBMI, johnBMI)
+//  if ( markBMI > johnBMI) {
+//    console.log(`Mark's BMI is ${markBMI} is higher than John's ${johnBMI}`)
+//  } else if ( johnBMI > markBMI) {
+//    console.log(`John's BMI is ${johnBMI} is higher than Mark's ${markBBMI}`)
+//  }
+
+// loops
+
+// for ( let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights reptition  ${rep} 🏋️‍♀️`)
+// }
+
+// const meisam = {
+//     firstName: "Meisam",
+//     lastName: "Mohammadi",
+//     brithYear: 1989,
+//     year: 2023,
+//     job: "teacher",
+//     friends: ["Peter", "Majid", "Steven"],
+//     driverLicense: true,
+// }
+
+// const type = [];
+
+// const arrMeisam = ['Meisam', 'Mohammadi', 1989, 'teacher', ['Petter', 'Majid', 'Adel'], true]
+
+// //filling type arrary
+// for ( let i = 0; i < arrMeisam.length; i++) {
+//   console.log(arrMeisam[i], typeof arrMeisam[i])
+
+//   // type[i] = typeof arrMeisam[i]
+//   type.push(typeof arrMeisam[i])
+// }
+
+// console.log(type)
+
+// const years = [1989, 1990, 1992, 1930];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i])
+// }
+// console.log(ages)
+
+/*
+years[i] === years[0] => i = 0; 2037 - 1989 = 48  => ages [48]
+years[i] === years[1] => i = 1; 2037 - 1990 = 47  => ages [48, 47]
+years[i] === years[2] => i = 2; 2037 - 1992 = 45  => ages [48, 47, 45]
+years[i] === years[3] => i = 3; 2037 - 1930 = 107 => ages [48, 47, 45, 107]
+*/
+
+// const meisam = [
+//   "Meisam",
+//   "Mohammadi",
+//   2023 - 1989,
+//   "teacher",
+//   ["Peter", "Majid", "Steven"],
+// ];
+
+// console.log("--Only String--")
+// for ( let i = 0; i < meisam.length; i++) {
+//   if ( typeof meisam[i] !== 'string') continue;
+
+//   console.log(meisam[i], typeof meisam[i]);
+// }
+
+// console.log("--- Only Number ---")
+// for (let i = 0; i < meisam.length; i++) {
+//   if ( typeof meisam[i] === 'number') break;
+//   console.log(meisam[i], typeof meisam[i])
+// }
+
+//   const meisam = [
+//     "Meisam",
+//     "Mohammadi",
+//     2023 - 1989,
+//     "teacher",
+//     ["Peter", "Majid", "Steven"],
+//   ];
+
+//   // 0, 1, 2, 3, 4
+//   // 4, 3, 2, 1
+// console.log(meisam.length)
+//   for (let i = meisam.length - 1; i >= 0; i-- ){
+//     console.log(i, meisam[i])
+//   }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`-----------Starting Exercise ${exercise}`)
+//   for (let rep = 1; rep < 5; rep++) {
+//     console.log(`Exercise ${exercise} : Lifting weight repetition 🏋️‍♂️`)
+//     for (let best = 1; best < 3; best++) {
+//       console.log(`Exercise ${exercise} : repetition ${rep} => and finaly this is a ${best}`)
+//     }
+//   }
+// }
+// >>>>>>> 6b409ae326153a5bab6887ded0c8f3b16aafc579
