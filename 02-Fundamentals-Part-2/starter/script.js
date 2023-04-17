@@ -692,6 +692,48 @@ GOOD LUCK 😀
 
 // Iteration the for loop
 
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights repetition ${rep}`);
-}
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+//Looping Arrays, Breaking and Continuing
+
+// const meisamArray = [
+//   "Meisam",
+//   "Mohammadi",
+//   2023 - 1989,
+//   "teacher",
+//   ["Micheal", "Peter", "Steven"],
+// ];
+
+// console.log(meisamArray[4][1]);
+
+// let types = [];
+// for (let i = 0; i <= meisamArray.length; i++) {
+//   console.log(meisamArray[i], typeof meisamArray[i]);
+
+//   types[i] = typeof meisamArray[i];
+  // types.push(typeof meisamArray[i]);
+// }
+// console.log(types);
+
+// const years = [1991, 1999, 1989, 2001];
+
+// const ages = [];
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2023 - years[i]);
+// }
+// console.log(ages);
+
+// console.log("----- ONLY STRINGS -----");
+// for (let i = 0; i < meisamArray.length; i++) {
+//   if (typeof meisamArray[i] !== "string") continue;
+//   console.log(meisamArray[i], typeof meisamArray[i]);
+// }
+
+// console.log("----- Breack Number -----");
+// for (let i = 0; i < meisamArray.length; i++) {
+//   if (typeof meisamArray[i] === "number") break;
+
+//   console.log(meisamArray[i], typeof meisamArray[i]);
+// }
