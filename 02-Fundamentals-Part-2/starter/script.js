@@ -713,7 +713,7 @@ GOOD LUCK 😀
 //   console.log(meisamArray[i], typeof meisamArray[i]);
 
 //   types[i] = typeof meisamArray[i];
-  // types.push(typeof meisamArray[i]);
+// types.push(typeof meisamArray[i]);
 // }
 // console.log(types);
 
@@ -737,3 +737,24 @@ GOOD LUCK 😀
 
 //   console.log(meisamArray[i], typeof meisamArray[i]);
 // }
+
+const meisamArray = [
+  "Meisam",
+  "Mohammadi",
+  2023 - 1989,
+  "teacher",
+  ["Micheal", "Peter", "Steven"],
+  true,
+];
+
+for (let i = meisamArray.length - 1; i >= 0; i--) {
+  console.log(meisamArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`Starting Exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+  }
+}
