@@ -689,3 +689,9 @@ GOOD LUCK 😀
 
 // console.log(markMiller.calcBMI(), johnSmith.calcBMI());
 // console.log(markMiller.bmi);
+
+// Iteration the for loop
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
