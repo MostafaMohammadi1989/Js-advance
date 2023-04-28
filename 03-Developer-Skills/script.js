@@ -4,7 +4,7 @@
 // PROBLEMS 1:
 // We work fir a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error"
 
-const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 // 1) understanding the problems
 // - What is temp apmlitude? Answer: difference between highest and lowest temp
@@ -17,24 +17,24 @@ const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 // - Find min value in temp array
 // - SubTract min form max (amplitud) and return it
 
-const calcTemperatures = function (temps) {
-  let max = temps[0];
-  let min = temps[0];
-  for (let i = 0; i < temps.length; i++) {
-    const curTemps = temps[i];
-    // For ignor erros
-    if (typeof curTemps !== "number") continue;
-    // For max temps
-    if (curTemps > max) max = curTemps;
-    // For min temps
-    if (curTemps < min) min = curTemps;
-  }
-  console.log(max, min);
-  return max - min;
-};
+// const calcTemperatures = function (temps) {
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemps = temps[i];
+//     // For ignor erros
+//     if (typeof curTemps !== "number") continue;
+//     // For max temps
+//     if (curTemps > max) max = curTemps;
+//     // For min temps
+//     if (curTemps < min) min = curTemps;
+//   }
+//   console.log(max, min);
+//   return max - min;
+// };
 
-const amplitud = calcTemperatures(temperatures);
-console.log(amplitud);
+// const amplitud = calcTemperatures(temperatures);
+// console.log(amplitud);
 
 // PROBLEMS 2:
 // 1) understanding the problems
@@ -42,26 +42,26 @@ console.log(amplitud);
 // 2) Breaking up into sub-problems
 // - How to merge 2 array?
 
-const calcTemperaturesNew = function (t1, t2) {
-  const temps = t1.concat(t2);
-  console.log(temps);
-  let max = temps[0];
-  let min = temps[0];
-  for (let i = 0; i < temps.length; i++) {
-    const curTemps = temps[i];
-    // For ignor erros
-    if (typeof curTemps !== "number") continue;
-    // For max temps
-    if (curTemps > max) max = curTemps;
-    // For min temps
-    if (curTemps < min) min = curTemps;
-  }
-  console.log(max, min);
-  return max - min;
-};
+// const calcTemperaturesNew = function (t1, t2) {
+//   const temps = t1.concat(t2);
+//   console.log(temps);
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemps = temps[i];
+//     // For ignor erros
+//     if (typeof curTemps !== "number") continue;
+//     // For max temps
+//     if (curTemps > max) max = curTemps;
+//     // For min temps
+//     if (curTemps < min) min = curTemps;
+//   }
+//   console.log(max, min);
+//   return max - min;
+// };
 
-const amplitudNew = calcTemperaturesNew([1, 2, 3, 4], [5, 6, 7, 8, 9]);
-console.log(amplitudNew);
+// const amplitudNew = calcTemperaturesNew([1, 2, 3, 4], [5, 6, 7, 8, 9]);
+// console.log(amplitudNew);
 
 // const arrOne = [1, 2, 3, 4];
 // const arrTwo = [5, 6, 7, 8];
@@ -81,3 +81,45 @@ console.log(amplitudNew);
 // };
 
 // mergArrays(arrOne, arrTwo);
+
+
+// const measureKekvin = function() {
+//   const measurement = {
+//     type: 'temp',
+//     unit: 'celsius',
+//     // C) FIX
+//     value: Number(prompt('Degrees celsius:')) 
+//   }
+//   // B) FIND
+//   console.table(measurement, typeof measurement)
+//   console.log('measurement =>', measurement);
+//   const kelvin = measurement.value + 273;
+//   return kelvin
+// }
+
+// // A) IDENTIFY
+// console.log(measureKekvin());
+
+
+
+// const calcTemperaturesBug = function (t1, t2) {
+//     const temps = t1.concat(t2);
+//     console.log(temps);
+//     let max = 0;
+//     let min = 0;
+//     for (let i = 0; i < temps.length; i++) {
+//       const curTemps = temps[i];
+//       // For ignor erros
+//       if (typeof curTemps !== "number") continue;
+//       // For max temps
+//       if (curTemps > max) max = curTemps;
+//       // For min temps
+//       if (curTemps < min) min = curTemps;
+//     }
+//     console.log(max, min);
+//     return max - min;
+//   };
+  
+//   const amplitudNew = calcTemperaturesBug([1, 2, 3, 4], [5, 6, 7, 8, 9]);
+//   console.log(amplitudNew);
+  
