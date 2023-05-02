@@ -108,7 +108,7 @@
 //     let max = 0;
 //     let min = 0;
 //     for (let i = 0; i < temps.length; i++) {
-//       const curTemps = temps[i];
+//       const cTemps = temps[i];
 //       // For ignor erros
 //       if (typeof curTemps !== "number") continue;
 //       // For max temps
@@ -123,3 +123,74 @@
 //   const amplitudNew = calcTemperaturesBug([1, 2, 3, 4], [5, 6, 7, 8, 9]);
 //   console.log(amplitudNew);
   
+
+/*
+Developer Skills & Editor Setup
+Coding Challenge #1
+Given an array of forecasted maximum temperatures, the thermometer displays a
+string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1
+days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+Your tasks:
+1. Create a function 'printForecast' which takes in an array 'arr' and logs a
+string like the above to the console. Try it with both test datasets.
+2. Use the problem-solving framework: Understand the problem and break it up
+into sub-problems!
+Test data:
+§ Data 1: [17, 21, 23]
+§ Data 2: [12, 5, -5, 0, 4]
+GOOD LUCK 😀
+
+*/
+/*
+  1) get one argument
+  2) check the argument at the index 0
+  3) use for loop for iteration and check number in the array
+  4) store argument like temp in the another valiable 
+  5) check the number with if statment for what number it's bigger another number and then store them on the Max variable
+  6) returen the max 
+
+*/
+// const arr1 = [17, 21, 23]
+
+// const printForecast = function(temp) {
+//   let max = temp[0]
+
+//   for ( let i = 0; i < temp.length; i ++) {
+//     let curTemp = temp[i]
+//     if (curTemp < max) max = curTemp
+//   }
+//   return max
+// }
+
+// const checkTemp = printForecast([2,4,5])
+// console.log('checkTemp =>', checkTemp);
+
+
+// 1) Understanding the problem
+// - Array transform to string, separated by ...
+// - What is the x days? Anser: index + 1
+
+// 2) Breaking up into sub-problems
+// - Transform array into string
+// - Transform each element to string with ºC
+// - Strings need to contain day ( index + 1 )
+// - Add ... between elements and start and end of 
+
+
+// print like this "... 17ºC in 1days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function(arr) {
+  let str = [];
+
+  for ( let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}ºC in ${i + 1}days ... `
+  }
+  console.log('...', str);
+}
+
+printForecast(data1)
+printForecast(data2)
