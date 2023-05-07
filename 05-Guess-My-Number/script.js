@@ -15,19 +15,22 @@ document.querySelector('.guess').value = 23;
 let secretNumber = Math.trunc(Math.random()* 20) + 1;
 
 let score = 20;
+let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function() {
     const guess =Number(document.querySelector('.guess').value)
     if (!guess) {
         document.querySelector('.message').textContent = '⛔ No Number!'
-    }
-    if ( guess === secretNumber ) {
+    } else if ( guess === secretNumber ) {
         document.querySelector('.message').textContent = '🎉 Corect number';
-        document.querySelector('.highscore').textContent = score;
-        // document.body.style.backgroundColor = 'red';
         document.querySelector('.number').textContent =secretNumber;
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').style.width = '30rem';
+
+        if ( score > highscore) {
+            highscore = score;
+            document.querySelector('.highscore').textContent = highscore;
+        }
     } else if ( guess > secretNumber) {
         if ( score > 1) {
             document.querySelector('.message').textContent = '📈 Too High!'
@@ -79,3 +82,4 @@ document.querySelector('.again').addEventListener('click', function(){
     // number.textContent ='?';
 
 }) 
+
