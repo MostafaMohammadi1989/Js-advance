@@ -23,7 +23,9 @@ let score = 20;
     if ( guess === secretNumber ) {
         document.querySelector('.message').textContent = '🎉 Corect number';
         document.querySelector('.highscore').textContent = score;
-        document.body.style.backgroundColor = 'red'
+        // document.body.style.backgroundColor = 'red';
+        document.querySelector('body').style.backgroundColor = '#60b347';
+        document.querySelector('.number').style.width = '30rem';
     } else if ( guess > secretNumber) {
         if ( score > 1) {
             document.querySelector('.message').textContent = '📈 Too High!'
