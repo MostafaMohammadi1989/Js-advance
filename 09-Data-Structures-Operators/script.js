@@ -12,8 +12,8 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   
-  order: function (startIndex, startMain) {
-    return [this.starterMenu[startIndex], this.mainMenu[startMain]]
+  order: function (startIndex, mainIndex) {
+    return [this.starterMenu[startIndex], this.mainMenu[mainIndex]]
   },
   openingHours: {
     thu: {
@@ -29,7 +29,50 @@ const restaurant = {
       close: 24,
     },
   },
+  orderDelivery: function({startIndex = 1, mainIndex = 1, time= '20:20', address}) {
+    console.log(`Order received ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be deliver to ${address} at ${time}`);
+  }
 };
+
+
+
+// Object Destructuring
+// restaurant.orderDelivery({
+//   time: "22:20",
+//   address: 'Tehran, North street',
+//   startIndex: 2,
+//   mainIndex: 2,
+// })
+
+
+// restaurant.orderDelivery({
+//   address: 'Tehran, North street',
+//   startIndex: 2,
+// })
+// const {name, openingHours, categories} = restaurant;
+// console.log('Obj destructuring ==>', name, openingHours, categories);
+
+// const {name: restaurantName, openingHours: hours, categories: tag} = restaurant;
+// console.log('Create New Obj Destructuring ==>', restaurantName, hours, tag);
+
+// const {menu = [], starterMenu: starter = []} = restaurant;
+// console.log('Menu Restaurant ==>', menu, starter);
+
+// let a = 1000;
+// let b = 999;
+// const obj = {a: 5, b: 10};
+// ({a, b} = obj)
+
+// console.log('Object Destructuring ==>', a, b);
+
+
+// // Nested Objects
+
+// const {fri : {open: o, close: c}}= openingHours;
+// console.log('Nested Objs ==>', o, c);
+
+
+
 
 
 // const arr = [2, 3, 4, 5];
@@ -43,8 +86,8 @@ const restaurant = {
 // console.log('Print resualt Array ==>', x, y, z, o);
 // console.log('Array log ==>', arr);
 
-let [main, , secondary] = restaurant.categories;
-console.log('new menu ==>', main, secondary);
+// let [main, , secondary] = restaurant.categories;
+// console.log('new menu ==>', main, secondary);
 
 
 // Switching with variable
@@ -54,23 +97,23 @@ console.log('new menu ==>', main, secondary);
 
 // console.log('Change posion in the menu ==>', main, secondary);
 
-[secondary, main] = [main, secondary];
-console.log('use the arr for dataStructuer ==>', main, secondary);
+// [secondary, main] = [main, secondary];
+// console.log('use the arr for dataStructuer ==>', main, secondary);
 
-// Resice 2 return value from the function
-const [starter, mainCourse] = restaurant.order(2, 0)
-console.log('Get main and start food ==>', starter, mainCourse);
+// // Resice 2 return value from the function
+// const [starter, mainCourse] = restaurant.order(2, 0)
+// console.log('Get main and start food ==>', starter, mainCourse);
 
-// Nested destructuring 
-const nested = [2, 4,[5, 6]];
-const [i, , [j, k]] = nested;
-console.log('Nested Destructuring ==>', i, j, k);
+// // Nested destructuring 
+// const nested = [2, 4,[5, 6]];
+// const [i, , [j, k]] = nested;
+// console.log('Nested Destructuring ==>', i, j, k);
 
-//Default Value
+// //Default Value
 
-const [p =1, q = 1, r =1]= [9, 10]
+// const [p =1, q = 1, r =1]= [9, 10]
 
-console.log('Default Value Destructuring ==>', p, q, r);
+// console.log('Default Value Destructuring ==>', p, q, r);
 
 
 
