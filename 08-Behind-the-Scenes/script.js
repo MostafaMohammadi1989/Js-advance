@@ -69,52 +69,113 @@
 
 
 // var firstName = 'Matilda'
-const meisam = {
-    firstName: 'Meisam',
-    year: 1989,
-    calcAge: function () {
-        // console.log('This in the Obj', this);
-        // Solution 1
-        // const self = this; // self or that
-        // console.log('This for year', 2037 - this.year);
-        // const isMillenial = function () {
-        //     console.log('self ==>', self);
-        //     console.log('is Millenial Function =>', self.year >= 1981 && self.year <= 1996);
-            // console.log('is Millenial Function =>', this.year >= 1981 && this.year <= 1996);
+// const meisam = {
+//     firstName: 'Meisam',
+//     year: 1989,
+//     calcAge: function () {
+//         // console.log('This in the Obj', this);
+//         // Solution 1
+//         // const self = this; // self or that
+//         // console.log('This for year', 2037 - this.year);
+//         // const isMillenial = function () {
+//         //     console.log('self ==>', self);
+//         //     console.log('is Millenial Function =>', self.year >= 1981 && self.year <= 1996);
+//             // console.log('is Millenial Function =>', this.year >= 1981 && this.year <= 1996);
 
-            console.log('This for year', 2037 - this.year);
-        // Solution 2
-        // const self = this; // self or that
-        const isMillenial =  () => {
-            console.log('This ==>', this);
-            console.log('This with firstName ==>', this.firstName);
-            console.log('is Millenial Function =>', this.year >= 1981 && this.year <= 1996);
-        }
-        isMillenial()
-    },
-    greet: () => {
-        console.log('This window', this);
-        console.log(`Hey ${this.firstName}`)
-    }
+//             console.log('This for year', 2037 - this.year);
+//         // Solution 2
+//         // const self = this; // self or that
+//         const isMillenial =  () => {
+//             console.log('This ==>', this);
+//             console.log('This with firstName ==>', this.firstName);
+//             console.log('is Millenial Function =>', this.year >= 1981 && this.year <= 1996);
+//         }
+//         isMillenial()
+//     },
+//     greet: () => {
+//         console.log('This window', this);
+//         console.log(`Hey ${this.firstName}`)
+//     }
+// }
+
+// meisam.greet();
+// meisam.calcAge();
+// // meisam.calcAge();
+
+
+// // Argument Keywords 
+
+// const addExper = function(a, b) {
+//     console.log(arguments)
+//     return a + b;
+// };
+// addExper(2, 5);
+// addExper(2, 5, 8, 12);
+
+// var addArrow = (a ,b) => {
+//     console.log('Arguments =>', arguments);
+//     return a + b
+// };
+
+// addArrow(2, 7, 9)
+
+
+
+// Primitives vs. Objects (Primitive vs. Reference Types)
+
+// let age = 30;
+// let oldAge = age;
+// age = 31;
+// console.log('Age ==>', age); 
+// console.log('Old Age ==>', oldAge);
+
+
+// const me = {
+//     name: 'Meisam',
+//     age: 30,
+// }
+
+// const friend = me;
+// friend.age = 27;
+
+// console.log('Friend ==>', friend);
+// console.log('Me ==>', me);
+
+
+
+// let lastName = 'Williams';
+// let oldLastName = lastName;
+// lastName = 'Davis';
+
+// console.log('Last Name ==>', lastName);
+// console.log('Olad Last Name ==>', oldLastName);
+
+// const jessica = {
+//     firstName: 'Jessica',
+//     lastName: 'Williams',
+//     age: 27
+// }
+
+// const marreidJessica = jessica;
+// marreidJessica.lastName = 'Davis';
+
+// console.log('Before Marreid ==>', jessica);
+// console.log('After Marreid ==>', marreidJessica);
+
+
+const jessica2 = {
+    firstName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+    family: ['Majid', 'Ali']
 }
 
-meisam.greet();
-meisam.calcAge();
-// meisam.calcAge();
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis'
 
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('Mahson');
 
-// Argument Keywords 
+console.log('Before Marreid ==>', jessica2);
+console.log('After Marreid ==>', jessicaCopy);
 
-const addExper = function(a, b) {
-    console.log(arguments)
-    return a + b;
-};
-addExper(2, 5);
-addExper(2, 5, 8, 12);
-
-var addArrow = (a ,b) => {
-    console.log('Arguments =>', arguments);
-    return a + b
-};
-
-addArrow(2, 7, 9)
