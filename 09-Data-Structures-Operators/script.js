@@ -31,10 +31,95 @@ const restaurant = {
   },
   orderDelivery: function({startIndex = 1, mainIndex = 1, time= '20:20', address}) {
     console.log(`Order received ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be deliver to ${address} at ${time}`);
+  },
+  orderPasta: function(ing1, ing2, ing3) {
+    console.log(`Here is yout delecuition pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
+  orderPizza: function(mainIngredient, ...otherIngredient) {
+    console.log('Main ==>', mainIngredient);
+    console.log('Other==>', otherIngredient);
+    console.log('Other==>', ...otherIngredient);
   }
 };
 
 
+// 1) Destructuring 
+// Seprade because on Right side of =
+ const arr = [1, 2, ...[3, 4]];
+ console.log('Array ==>', ...arr);
+
+ // Rest because on Left side of = 
+ const [a, b, ...others] = [1, 2, 3, 4, 5];
+ console.log('Rest of Right side ==>', a, b, ...others);
+
+ const [pizza, , risotto, ...othersFood] = [...restaurant.mainMenu,...restaurant.starterMenu ];
+ console.log('Rest of restaurant food ==>', pizza, risotto, ...othersFood);
+
+// Object
+const {sat, ...weekdays} =restaurant.openingHours;
+console.log('Object DES==>', sat, weekdays);
+
+// 2) Function
+
+const add = function(...num) {
+  let sum = 0;
+  for ( let i = 0; i < num.length; i++) {
+    sum += num[i];
+  }
+  console.log('Function Add ==>', sum);
+}
+
+add(2, 3);
+add(2, 3, 4, 5, 7, 8);
+add(2, 3, 8, 9, 7, 6, 14);
+
+const x = [3, 5, 8];
+add(...x)
+
+restaurant.orderPizza('mashroom', 'onion', 'olives', 'spinetch')
+
+// Objects  shallow copy
+// const newRestaurant = {foundedIn: 1998, ...restaurant, founder: "Meisam"};
+// console.log('New Restaurant ==>', newRestaurant);
+
+// const restaurantCopy = {...restaurant}
+// restaurantCopy.name = "Meisam Restaurant";
+
+// console.log('Shallow Copy ==>', restaurantCopy.name);
+// console.log('Original  ==>', restaurant.name);
+
+
+// const ingredient = [prompt('Let\'s Make a pasta? ingredient 1?'), prompt('ingredient 2?'), prompt('ingredient 3?')];
+// console.log('ingredient  ==>', ingredient);
+
+// restaurant.orderPasta(...ingredient)
+
+// const arr = [7, 8, 9 ];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]]
+// console.log('Bad Call Array ==>', badNewArr);
+// const newArr = [1, 2, ...arr]
+// console.log('Good Call Array ==>', newArr);
+// console.log('Good Call Array ==>', ...newArr);
+
+
+// const newMenu = [...restaurant.mainMenu, 'Ghorme'];
+// console.log('New Menu ==>', newMenu);
+
+// // Copy Array
+// const newMenuCopy = [...restaurant.mainMenu]
+// console.log('New Menu Copy ==>', newMenuCopy);
+
+// // Joing to array
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu]
+// console.log('Whole Menu ==>', ...menu);
+
+// const str = "Meisam";
+// const letters = [...str, '', 'S.o']
+// console.log('Letters ==>', letters);
+// console.log('String ==>', ...str);
+
+// const [a, b, c, d, f] = newArr
+// console.log('Des ==>', a, b, c, d, f);
 
 // Object Destructuring
 // restaurant.orderDelivery({
