@@ -42,41 +42,61 @@ const restaurant = {
   }
 };
 
+console.log('--------OR-----------');
+console.log('OR==>', 3 || 'Meisam'); // 3
+console.log('OR==>', '' || 'Meisam'); // Meisam
+console.log('OR==>', true || 0 ); //true
+console.log('OR==>', undefined  || null ); // null
 
-// 1) Destructuring 
-// Seprade because on Right side of =
- const arr = [1, 2, ...[3, 4]];
- console.log('Array ==>', ...arr);
+// restaurant.numGuests = 23;
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log('Guests1 Num==>', guests1);
 
- // Rest because on Left side of = 
- const [a, b, ...others] = [1, 2, 3, 4, 5];
- console.log('Rest of Right side ==>', a, b, ...others);
+const guests2 = restaurant.numGuests || 12;
+console.log('Guests2 Num==>', guests2);
 
- const [pizza, , risotto, ...othersFood] = [...restaurant.mainMenu,...restaurant.starterMenu ];
- console.log('Rest of restaurant food ==>', pizza, risotto, ...othersFood);
+console.log('--------AND-----------');
+console.log('AND ==>', 0 && 'Meisam');
+console.log('AND ==>', 7 && 'Meisam');
+console.log('AND ==>', 'Majid' && 23 && null && 'Meisam');
 
-// Object
-const {sat, ...weekdays} =restaurant.openingHours;
-console.log('Object DES==>', sat, weekdays);
 
-// 2) Function
 
-const add = function(...num) {
-  let sum = 0;
-  for ( let i = 0; i < num.length; i++) {
-    sum += num[i];
-  }
-  console.log('Function Add ==>', sum);
-}
+// // 1) Destructuring 
+// // Seprade because on Right side of =
+//  const arr = [1, 2, ...[3, 4]];
+//  console.log('Array ==>', ...arr);
 
-add(2, 3);
-add(2, 3, 4, 5, 7, 8);
-add(2, 3, 8, 9, 7, 6, 14);
+//  // Rest because on Left side of = 
+//  const [a, b, ...others] = [1, 2, 3, 4, 5];
+//  console.log('Rest of Right side ==>', a, b, ...others);
 
-const x = [3, 5, 8];
-add(...x)
+//  const [pizza, , risotto, ...othersFood] = [...restaurant.mainMenu,...restaurant.starterMenu ];
+//  console.log('Rest of restaurant food ==>', pizza, risotto, ...othersFood);
 
-restaurant.orderPizza('mashroom', 'onion', 'olives', 'spinetch')
+// // Object
+// const {sat, ...weekdays} =restaurant.openingHours;
+// console.log('Object DES==>', sat, weekdays);
+
+// // 2) Function
+
+// const add = function(...num) {
+//   let sum = 0;
+//   for ( let i = 0; i < num.length; i++) {
+//     sum += num[i];
+//   }
+//   console.log('Function Add ==>', sum);
+// }
+
+// add(2, 3);
+// add(2, 3, 4, 5, 7, 8);
+// add(2, 3, 8, 9, 7, 6, 14);
+
+// const x = [3, 5, 8];
+// add(...x)
+
+// restaurant.orderPizza('mashroom', 'onion', 'olives', 'spinetch')
 
 // Objects  shallow copy
 // const newRestaurant = {foundedIn: 1998, ...restaurant, founder: "Meisam"};
