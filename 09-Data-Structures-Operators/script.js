@@ -1,65 +1,106 @@
 'use strict';
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   
-  order: function (startIndex, mainIndex) {
-    return [this.starterMenu[startIndex], this.mainMenu[mainIndex]]
-  },
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  orderDelivery: function({startIndex = 1, mainIndex = 1, time= '20:20', address}) {
-    console.log(`Order received ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be deliver to ${address} at ${time}`);
-  },
-  orderPasta: function(ing1, ing2, ing3) {
-    console.log(`Here is yout delecuition pasta with ${ing1}, ${ing2} and ${ing3}`);
-  },
-  orderPizza: function(mainIngredient, ...otherIngredient) {
-    console.log('Main ==>', mainIngredient);
-    console.log('Other==>', otherIngredient);
-    console.log('Other==>', ...otherIngredient);
-  }
-};
+//   order: function (startIndex, mainIndex) {
+//     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]]
+//   },
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+//   orderDelivery: function({startIndex = 1, mainIndex = 1, time= '20:20', address}) {
+//     console.log(`Order received ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be deliver to ${address} at ${time}`);
+//   },
+//   orderPasta: function(ing1, ing2, ing3) {
+//     console.log(`Here is yout delecuition pasta with ${ing1}, ${ing2} and ${ing3}`);
+//   },
+//   orderPizza: function(mainIngredient, ...otherIngredient) {
+//     console.log('Main ==>', mainIngredient);
+//     console.log('Other==>', otherIngredient);
+//     console.log('Other==>', ...otherIngredient);
+//   }
+// };
 
-console.log('--------OR-----------');
-console.log('OR==>', 3 || 'Meisam'); // 3
-console.log('OR==>', '' || 'Meisam'); // Meisam
-console.log('OR==>', true || 0 ); //true
-console.log('OR==>', undefined  || null ); // null
+// const rest1 = {
+//   name: 'Capri',
+//   numGuests: 0
+// }
+
+// const rest2 = {
+//   name: 'La Pizza',
+//   owner: 'Gioavani Rosi'
+// }
+//OR asigment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+// rest1.numGuests ||= 12;
+// rest2.numGuests ||= 12;
+
+
+//Nullish asigment oprator (null or undifind)
+// rest1.numGuests ??= 15;
+// rest2.numGuests ??= 15;
+
+// rest2.owner = rest2.owner && 'Meisam';
+// rest1.owner = rest1.owner && 'Meisam';
+
+// rest2.owner &&= 'Meisam'
+// console.log('Rest 1==>', rest1);
+// console.log('Rest 2==>', rest2);
+
+
+
+// console.log('--------OR-----------');
+// console.log('OR==>', 3 || 'Meisam'); // 3
+// console.log('OR==>', '' || 'Meisam'); // Meisam
+// console.log('OR==>', true || 0 ); //true
+// console.log('OR==>', undefined  || null ); // null
+
+
+
+// Nullish: null and Undifind ( NOT 0 or '')
+
+// restaurant.numGuests = 0;
+// const guests1 = restaurant.numGuests || 10;
+// console.log('Guests1 Num==>', guests1);
+
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log('Guest Correct ==>', guestCorrect);
+
 
 // restaurant.numGuests = 23;
-restaurant.numGuests = 0;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log('Guests1 Num==>', guests1);
+// restaurant.numGuests = 0;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log('Guests1 Num==>', guests1);
 
-const guests2 = restaurant.numGuests || 12;
-console.log('Guests2 Num==>', guests2);
+// const guests2 = restaurant.numGuests || 12;
+// console.log('Guests2 Num==>', guests2);
 
-console.log('--------AND-----------');
-console.log('AND ==>', 0 && 'Meisam');
-console.log('AND ==>', 7 && 'Meisam');
-console.log('AND ==>', 'Majid' && 23 && null && 'Meisam');
+// console.log('--------AND-----------');
+// console.log('AND ==>', 0 && 'Meisam');
+// console.log('AND ==>', 7 && 'Meisam');
+// console.log('AND ==>', 'Majid' && 23 && null && 'Meisam');
 
 
 
@@ -222,4 +263,108 @@ console.log('AND ==>', 'Majid' && 23 && null && 'Meisam');
 
 
 
+/*
+Data Structures, Modern Operators and Strings
+Coding Challenge #1
+We're building a football betting app (soccer for my American friends 😅)!
+Suppose we get data from a web service about a certain game ('game' variable on
+next page). In this challenge we're gonna work with that data.
+Your tasks:
+1. Create one player array for each team (variables 'players1' and
+'players2')
+2. The first player in any player array is the goalkeeper and the others are field
+players. For Bayern Munich (team 1) create one variable ('gk') with the
+goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10
+field players
+3. Create an array 'allPlayers' containing all players of both teams (22
+players)
+4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a
+new array ('players1Final') containing all the original team1 players plus
+'Thiago', 'Coutinho' and 'Perisic'
+5. Based on the game.odds object, create one variable for each odd (called
+'team1', 'draw' and 'team2')
+6. Write a function ('printGoals') that receives an arbitrary number of player
+names (not an array) and prints each of them to the console, along with the
+number of goals that were scored in total (number of player names passed in)
+7. The team with the lower odd is more likely to win. Print to the console which
+team is more likely to win, without using an if/else statement or the ternary
+operator.
+Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
+Then, call the function again with players from game.scored
+GOOD LUCK 😀
+The Complete JavaScript Course 16
+*/
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+    'Neuer',
+    'Pavard',
+    'Martinez',
+    'Alaba',
+    'Davies',
+    'Kimmich',
+    'Goretzka',
+    'Coman',
+    'Muller',
+    'Gnarby',
+    'Lewandowski',
+    ],
+    [
+    'Burki',
+    'Schulz',
+    'Hummels',
+    'Akanji',
+    'Hakimi',
+    'Weigl',
+    'Witsel',
+    'Hazard',
+    'Brandt',
+    'Sancho',
+    'Gotze',
+    ],
+  ],
+score: '4:0',
+scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+'Hummels'],
+date: 'Nov 9th, 2037',
+odds: {
+    team1: 11.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
 
+// .1
+const [players1, players2] = game.players
+console.log('dis==>', players1, players2);
+
+//2.
+const [gk, ...fieldPlayers] = players1;
+console.log('nuber two==>', 'Gol Keeper =>', gk, fieldPlayers);
+
+//3.
+const allPlayers = [...players1, ...players2]
+console.log('AllPlayers==>', allPlayers);
+
+//4.
+const players1Final = [...players1, 'Meisam', 'Ali', 'Majid']
+console.log('Players Final one==>', players1Final);
+
+//5. 
+const {odds: {team1, x:draw, team2}} = game;
+console.log('Teams==>', team1, draw, team2);
+
+//6.
+const printGoals = function(...players) {
+  console.log('Playsers==>', players );
+  console.log(`${players.length} goals were scored`)
+}
+
+// printGoals( 'Davies', 'Muller', 'Lewandowski', 'Kimmich')
+printGoals(...game.scored)
+
+//7. 
+team1 < team2 && console.log('Team one is more likely to win');
+team1 > team2 && console.log('Team two is more likely to win');
