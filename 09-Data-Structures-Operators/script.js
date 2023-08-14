@@ -46,17 +46,43 @@ const restaurant = {
   }
 };
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-for (const item of menu) console.log('For of loop==>', item);
-for (const item of menu.entries()) {
-  console.log('with entries ==>', item);
-}
+// for (const item of menu) console.log('For of loop==>', item);
+// for (const item of menu.entries()) {
+//   console.log('with entries ==>', item);
+// }
 
-for (const [i, el] of menu.entries()) {
-  console.log(`${i + 1} : ${el}`);
-}
+// for (const [i, el] of menu.entries()) {
+//   console.log(`${i + 1} : ${el}`);
+// }
+
 // console.log('Entries==>', [...menu.entries()]);
+
+if (restaurant.openingHours && restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open)
+// with optional chaining
+console.log('Optional Chaining ==>', restaurant.openingHours.mon?.open);
+
+//Exxampel optional chaining and nulish
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? 'Closed';
+  console.log(`on ${day} we open at ${open}`);
+}
+
+
+// Methods
+console.log('==>', restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log('==>', restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Arrays
+const users = [
+  {name: 'Meisam', email: 'hello@meisam.io'}
+]
+
+console.log('==>', users[0]?.name ?? 'Uesr array empty');
+console.log('==>', users[3]?.name ?? 'Uesr array empty');
 
 // const rest1 = {
 //   name: 'Capri',
