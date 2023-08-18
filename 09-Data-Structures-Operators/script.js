@@ -47,6 +47,45 @@ const restaurant = {
 };
 
 
+const rest = new Map()
+
+rest.set('name', 'Clasicano Itaiano');
+rest.set(1, 'Firenze Italy');
+console.log('==>', rest.set(2, 'Lisbon'));
+
+rest
+  .set('Categorise',  ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(')
+
+console.log('==>', rest.get('name'));
+console.log('==>', rest.get(true));
+console.log('==>', rest.get(false));
+console.log('==>', rest.get('Categorise'));
+
+const time = 21;
+
+console.log('==>', rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log('has method==>', rest.has('Categorise'));
+console.log('delete method==>', rest.delete(2));
+console.log('==>', rest);
+
+const arr = [1, 2];
+rest.set(arr, 'Test')
+console.log('==>', rest.get(arr));
+
+console.log('size==>', rest.size);
+
+rest.set(document.querySelector('h1'), 'Heading')
+console.log('==>', rest);
+
+
+
+/*
+/////////////////////////////////////////////////////
 // Set
 const orderSet = new Set([
   'pasta', 'pitzza', 'pitzza', 'roseto', 'pasta', 'pitzza'
@@ -82,7 +121,8 @@ console.log('==>', new Set('MeisamMohammadi').size);
 console.log('==>', new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size);
 
 
-
+//////////////////////////////////////////////////////////
+*/
 
 
 
