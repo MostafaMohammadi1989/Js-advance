@@ -46,6 +46,46 @@ const restaurant = {
   }
 };
 
+
+// Set
+const orderSet = new Set([
+  'pasta', 'pitzza', 'pitzza', 'roseto', 'pasta', 'pitzza'
+])
+
+console.log('==>', orderSet);
+
+console.log('new set==>', new Set('meisam'));
+console.log('order size==>', orderSet.size);
+console.log('==>', orderSet.has('pitzza'));
+console.log('==>', orderSet.has('lazania'));
+
+orderSet.add('garlic bread')
+orderSet.add('garlic bread')
+
+orderSet.delete('roseto')
+console.log('check add new food==>', orderSet);
+
+
+for (const order of orderSet) console.log('==>', order);
+
+
+//Example
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffUnique = [...new Set(staff)]
+console.log('==>', staffUnique);
+
+for (const stfUnique of staffUnique) console.log('==>', stfUnique);
+
+console.log('==>', new Set('MeisamMohammadi').size);
+console.log('==>', new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size);
+
+
+
+
+
+
 /*
 Coding Challenge #2
 Let's continue with our football betting app! Keep using the 'game' variable from
@@ -75,66 +115,66 @@ GOOD LUCK 😀
 */
 
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-    'Neuer',
-    'Pavard',
-    'Martinez',
-    'Alaba',
-    'Davies',
-    'Kimmich',
-    'Goretzka',
-    'Coman',
-    'Muller',
-    'Gnarby',
-    'Lewandowski',
-    ],
-    [
-    'Burki',
-    'Schulz',
-    'Hummels',
-    'Akanji',
-    'Hakimi',
-    'Weigl',
-    'Witsel',
-    'Hazard',
-    'Brandt',
-    'Sancho',
-    'Gotze',
-    ],
-  ],
-score: '4:0',
-scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
-'Hummels'],
-date: 'Nov 9th, 2037',
-odds: {
-    team1: 11.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//     'Neuer',
+//     'Pavard',
+//     'Martinez',
+//     'Alaba',
+//     'Davies',
+//     'Kimmich',
+//     'Goretzka',
+//     'Coman',
+//     'Muller',
+//     'Gnarby',
+//     'Lewandowski',
+//     ],
+//     [
+//     'Burki',
+//     'Schulz',
+//     'Hummels',
+//     'Akanji',
+//     'Hakimi',
+//     'Weigl',
+//     'Witsel',
+//     'Hazard',
+//     'Brandt',
+//     'Sancho',
+//     'Gotze',
+//     ],
+//   ],
+// score: '4:0',
+// scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+// 'Hummels'],
+// date: 'Nov 9th, 2037',
+// odds: {
+//     team1: 11.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-// 1.
-for (const [i, player] of game.scored.entries())
-console.log(`Goal ${i + 1} : players ${player}`);
+// // 1.
+// for (const [i, player] of game.scored.entries())
+// console.log(`Goal ${i + 1} : players ${player}`);
 
-// 2.
-const odds = Object.values(game.odds);
-let average = 0;
+// // 2.
+// const odds = Object.values(game.odds);
+// let average = 0;
 
-for (const odd of odds) average += odd;
-average /= odds.length;
-console.log('==>', average);
+// for (const odd of odds) average += odd;
+// average /= odds.length;
+// console.log('==>', average);
 
 
-// 3.
-for ( const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
-  console.log(`Odd of ${teamStr} ${odd}`);
-}
+// // 3.
+// for ( const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
 
 
 
